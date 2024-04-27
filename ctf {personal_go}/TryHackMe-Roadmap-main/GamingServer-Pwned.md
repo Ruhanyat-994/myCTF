@@ -9,7 +9,7 @@
 
 `nmap -sC -sV 10.10.73.9 >> nmap.txt`
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled.png "port scan")
+![GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled.png](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled.png)
 
 1. there are only two ports open ssh and http
 2. if we go to that IP we can find a website
