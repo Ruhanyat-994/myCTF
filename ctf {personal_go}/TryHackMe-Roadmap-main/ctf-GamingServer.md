@@ -58,16 +58,14 @@
     
     I'll save the output in `hash.txt` and then we can crack the password with the wordlist we found using John the Ripper.
     
-    ![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%204.png)
-    
-    ![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%205.png)
+ ![Untitled](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-8.png?raw=true)    
     
     We got the password for the private key. Now we can login via SSH and read the user flag!
     
 4. Now we ave to use  `ssh -i secretKey [john@10.10.215.18](mailto:john@10.10.215.18)`
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%206.png)
-
+![Untitled](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-9.png?raw=true)
+![Untitled](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-10.png?raw=true)
 in this form we need to give te secretKey 600 chmod permissio (600 permissions means that **only the owner of the file has full read and write access to it**.)
 
 ssh private key needs 600  permission
@@ -77,8 +75,8 @@ ssh private key needs 600  permission
 1. We have a shell as user `john` and now we need to find a way to escalate our privileges to root.
 
 If we use the `id` command, we can see that the user `john` is a part of the `lxd` group.
-
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%207.png)
+[
+![Untitled](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-11.png?raw=true)
 
 LXD is a lightweight container hypervisor which allows to run linux containers. If a member is part of the `lxd` group, it can escalate its privileges to user `root` irrespective of the fact that it has sudo permissions or not.
 
@@ -95,7 +93,7 @@ I found [this](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/
     
     This will create a `.tar.gz` compressed image similar to this:
     
-    ![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%208.png)
+    ![Untitled](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-12.png?raw=true)
     
     Next we need to copy the compressed file to the target machine and then import the image using `lxc`.
     
@@ -138,10 +136,10 @@ I found [this](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/
     
 2. In the middle section you have to run a simple http server and the you have to wget with your machines ip address tun0 in the target machine.s
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%209.png)
+![Untitled](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-12.png?raw=true)
 
 at last !
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%2010.png)
+![Untitled](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-14.png?raw=true)
 
 ### **Alhumdulillah!**
