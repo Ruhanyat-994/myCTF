@@ -9,13 +9,12 @@
 
 `nmap -sC -sV 10.10.73.9 >> nmap.txt`
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled.png)
+![alt text](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-1.png?raw=true)
 
 1. there are only two ports open ssh and http
 2. if we go to that IP we can find a website
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%201.png)
-
+[![alt text](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-2.png?raw=true)
 1. and in the dev tools we can have a potential user name which is john
 2. for finding hidden files and directories we can use 
 
@@ -23,8 +22,7 @@
 
 1. we found some directories
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%202.png)
-
+[![alt text](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-3.png?raw=true)
 1. `/about.html (Status: 200)
 /about.php (Status: 200)
 /index.html (Status: 200)
@@ -35,7 +33,7 @@
 2. In the `/secret` directory, we have a file named `secretKey` which contains a private key. We have SSH installed on the target machine. This could be the private SSH key of user `john`.
 3. 
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%203.png)
+![alt text](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-4.png?raw=true)
 
 1. but this thing is password protected
 2. We also have a `/uploads` which contains some interesting files.
