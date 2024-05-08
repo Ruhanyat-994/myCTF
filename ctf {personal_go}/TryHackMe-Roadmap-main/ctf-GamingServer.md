@@ -80,7 +80,7 @@ If we use the `id` command, we can see that the user `john` is a part of the `lx
 
 LXD is a lightweight container hypervisor which allows to run linux containers. If a member is part of the `lxd` group, it can escalate its privileges to user `root` irrespective of the fact that it has sudo permissions or not.
 
-I found [this](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/interesting-groups-linux-pe/lxd-privilege-escalation?ref=infosecarticles.com) guide related to `lxd` privilege escalation. We need to build an `alpine` image and then we can mount the `/root` directory of  the target machine to the `/mnt` directory of a `lxd` container.
+I found [this](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/interesting-groups-linux-pe/lxd-privilege-escalation?ref=infosecarticles.com) guide related to <b>`lxd` privilege escalation</b>. We need to build an `alpine` image and then we can mount the `/root` directory of  the target machine to the `/mnt` directory of a `lxd` container.
 
 1. First we need to build the image in our own machine:
     
