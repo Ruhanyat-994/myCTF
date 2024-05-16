@@ -2,12 +2,14 @@
 
 [https://tryhackme.com/r/room/gamingserver](https://tryhackme.com/r/room/gamingserver)
 
-### **USER_FLAG{ } :**
+### **USER_FLAG{ } :**  
+
 
 1. we get the target ip which is 10.10.73.9
 2. after doing an port scan  → 
 
-`nmap -sC -sV 10.10.73.9 >> nmap.txt`
+`nmap -sC -sV 10.10.73.9 >> nmap.txt`  
+
 
 ![alt text](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/blob/master/ctf%20%7Bpersonal_go%7D/TryHackMe-Roadmap-main/Photos/game_server-1.png?raw=true)
 
