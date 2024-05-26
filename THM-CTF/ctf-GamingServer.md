@@ -9,12 +9,12 @@
 
 `nmap -sC -sV 10.10.73.9 >> nmap.txt`
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled.png)
+![game_server-1](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/f5e8b5f1-4e74-43f7-808f-2caf462169e1)
 
 1. there are only two ports open ssh and http
 2. if we go to that IP we can find a website
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%201.png)
+![game_server-2](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/a221b63e-307e-4824-8e35-7ac2eed5ebe8)
 
 1. and in the dev tools we can have a potential user name which is john
 2. for finding hidden files and directories we can use 
@@ -23,7 +23,7 @@
 
 1. we found some directories
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%202.png)
+![game_server-3](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/68c04bd6-b984-4c22-979f-dccc79c99180)
 
 1. `/about.html (Status: 200)
 /about.php (Status: 200)
@@ -35,7 +35,7 @@
 2. In the `/secret` directory, we have a file named `secretKey` which contains a private key. We have SSH installed on the target machine. This could be the private SSH key of user `john`.
 3. 
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%203.png)
+![game_server-4](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/1ec8cde6-b8f5-4454-b9eb-e1645fa4feef)
 
 1. but this thing is password protected
 2. We also have a `/uploads` which contains some interesting files.
@@ -60,15 +60,15 @@
     
     I'll save the output in `hash.txt` and then we can crack the password with the wordlist we found using John the Ripper.
     
-    ![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%204.png)
+![game_server-9](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/fc5a3aef-cb5d-4a38-9bce-92cda2d6d8c9)
     
-    ![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%205.png)
+![game_server-10](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/61531c9f-8a04-442d-82de-e31827cbba46)
     
     We got the password for the private key. Now we can login via SSH and read the user flag!
     
 4. Now we ave to use  `ssh -i secretKey [john@10.10.215.18](mailto:john@10.10.215.18)`
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%206.png)
+![game_server-11](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/68a10cb0-45a0-4e5a-bacb-82dc864eb1e4)
 
 in this form we need to give te secretKey 600 chmod permissio (600 permissions means that **only the owner of the file has full read and write access to it**.)
 
@@ -80,7 +80,7 @@ ssh private key needs 600  permission
 
 If we use the `id` command, we can see that the user `john` is a part of the `lxd` group.
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%207.png)
+![game_server-12](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/864a3668-e5b9-4afc-8e0b-44d48eba089a)
 
 LXD is a lightweight container hypervisor which allows to run linux containers. If a member is part of the `lxd` group, it can escalate its privileges to user `root` irrespective of the fact that it has sudo permissions or not.
 
@@ -97,7 +97,7 @@ I found [this](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/
     
     This will create a `.tar.gz` compressed image similar to this:
     
-    ![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%208.png)
+    
     
     Next we need to copy the compressed file to the target machine and then import the image using `lxc`.
     
@@ -140,10 +140,10 @@ I found [this](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/
     
 2. In the middle section you have to run a simple http server and the you have to wget with your machines ip address tun0 in the target machine.s
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%209.png)
+
 
 at last !
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%2010.png)
+![game_server-14](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/ebb5227c-05ee-49df-b0d5-8ff9480e5609)
 
 ### **Alhumdulillah!**
