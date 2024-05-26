@@ -60,15 +60,15 @@
     
     I'll save the output in `hash.txt` and then we can crack the password with the wordlist we found using John the Ripper.
     
-    ![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%204.png)
+![game_server-9](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/fc5a3aef-cb5d-4a38-9bce-92cda2d6d8c9)
     
-    ![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%205.png)
+![game_server-10](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/61531c9f-8a04-442d-82de-e31827cbba46)
     
     We got the password for the private key. Now we can login via SSH and read the user flag!
     
 4. Now we ave to use  `ssh -i secretKey [john@10.10.215.18](mailto:john@10.10.215.18)`
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%206.png)
+![game_server-11](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/68a10cb0-45a0-4e5a-bacb-82dc864eb1e4)
 
 in this form we need to give te secretKey 600 chmod permissio (600 permissions means that **only the owner of the file has full read and write access to it**.)
 
@@ -80,7 +80,7 @@ ssh private key needs 600  permission
 
 If we use the `id` command, we can see that the user `john` is a part of the `lxd` group.
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%207.png)
+![game_server-12](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/864a3668-e5b9-4afc-8e0b-44d48eba089a)
 
 LXD is a lightweight container hypervisor which allows to run linux containers. If a member is part of the `lxd` group, it can escalate its privileges to user `root` irrespective of the fact that it has sudo permissions or not.
 
@@ -97,7 +97,7 @@ I found [this](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/
     
     This will create a `.tar.gz` compressed image similar to this:
     
-    ![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%208.png)
+    
     
     Next we need to copy the compressed file to the target machine and then import the image using `lxc`.
     
@@ -140,10 +140,10 @@ I found [this](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/
     
 2. In the middle section you have to run a simple http server and the you have to wget with your machines ip address tun0 in the target machine.s
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%209.png)
+
 
 at last !
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%2010.png)
+![game_server-14](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/ebb5227c-05ee-49df-b0d5-8ff9480e5609)
 
 ### **Alhumdulillah!**
