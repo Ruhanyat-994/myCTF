@@ -9,12 +9,12 @@
 
 `nmap -sC -sV 10.10.73.9 >> nmap.txt`
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled.png)
+![game_server-1](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/f5e8b5f1-4e74-43f7-808f-2caf462169e1)
 
 1. there are only two ports open ssh and http
 2. if we go to that IP we can find a website
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%201.png)
+![game_server-2](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/a221b63e-307e-4824-8e35-7ac2eed5ebe8)
 
 1. and in the dev tools we can have a potential user name which is john
 2. for finding hidden files and directories we can use 
@@ -23,7 +23,7 @@
 
 1. we found some directories
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%202.png)
+![game_server-3](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/68c04bd6-b984-4c22-979f-dccc79c99180)
 
 1. `/about.html (Status: 200)
 /about.php (Status: 200)
@@ -35,7 +35,7 @@
 2. In the `/secret` directory, we have a file named `secretKey` which contains a private key. We have SSH installed on the target machine. This could be the private SSH key of user `john`.
 3. 
 
-![Untitled](GamingServer%204dee5f9a77194ea79397127f01abba90/Untitled%203.png)
+![game_server-4](https://github.com/Ruhanyat-994/ctf-capture_the_flag-/assets/110297704/1ec8cde6-b8f5-4454-b9eb-e1645fa4feef)
 
 1. but this thing is password protected
 2. We also have a `/uploads` which contains some interesting files.
