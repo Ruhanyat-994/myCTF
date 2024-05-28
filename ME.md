@@ -1,6 +1,5 @@
 # Mian Al Ruhanyat
 
-**ID**: 0112330186
 
 ---
 
