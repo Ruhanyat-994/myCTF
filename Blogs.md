@@ -1,7 +1,6 @@
 ## Security and Bug Bounty Blogs
 
 ### Blogs that I will read
-- [LU3KY Online](https://lu3ky.online/)
 - [SpaceRaccoon](https://spaceraccoon.dev/)
 - [Shubs](https://shubs.io)
 - [Krevetk0 on Medium](https://krevetk0.medium.com/)
