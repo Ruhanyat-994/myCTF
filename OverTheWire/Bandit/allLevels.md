@@ -124,3 +124,10 @@ bandit4@bandit:~/inhere$ cat ./-file07
 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
 ```
+#### password :
+```plaintext
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+```
+```plaintext
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+```
