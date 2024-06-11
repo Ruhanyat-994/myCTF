@@ -90,10 +90,37 @@ bandit3@bandit:~/inhere$ cat "...Hiding-From-You"
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 
 ```
+
 #### password :
 ```plaintext
  2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ```
 ```plaintext
 ssh bandit4@bandit.labs.overthewire.org -p 2220
+```
+
+# Level 4-5
+
+## Commands
+
+> ##### **The file command in Kali Linux is used to determine the type of a file. It performs tests to classify files into categories like text, executable, directory, etc.**
+
+```plaintext
+bandit4@bandit:~/inhere$ ls
+-file00  -file02  -file04  -file06  -file08
+-file01  -file03  -file05  -file07  -file09
+bandit4@bandit:~/inhere$ file ./*
+./-file00: data
+./-file01: data
+./-file02: data
+./-file03: data
+./-file04: data
+./-file05: data
+./-file06: data
+./-file07: ASCII text
+./-file08: data
+./-file09: data
+bandit4@bandit:~/inhere$ cat ./-file07 
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+
 ```
