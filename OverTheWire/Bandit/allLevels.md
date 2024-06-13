@@ -210,4 +210,11 @@ bandit5@bandit:~/inhere$ cd ./maybehere07/
 bandit5@bandit:~/inhere/maybehere07$ cat ./.file2
 HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 ```
+#### password :
+```plaintext
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+```
+```plaintext
+ssh bandit6na @bandit.labs.overthewire.org -p 2220
+```
 
