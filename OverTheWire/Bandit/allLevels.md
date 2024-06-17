@@ -194,6 +194,7 @@ bandit5@bandit:~/inhere$ du -b -a | wc -l
 **There comes 201 files for this command**
 - we can filter it through "grep"
 
+
 ```plaintext
 bandit5@bandit:~$ du -b -a | grep 1033
 1033	./inhere/maybehere07/.file2
@@ -201,6 +202,7 @@ bandit5@bandit:~$ cd ./inhere/maybehere07/
 bandit5@bandit:~/inhere/maybehere07$ cat ./.file2
 HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 ```
+
 ### Style - 2
 
 ```plaintext
@@ -210,11 +212,66 @@ bandit5@bandit:~/inhere$ cd ./maybehere07/
 bandit5@bandit:~/inhere/maybehere07$ cat ./.file2
 HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 ```
+
 #### password :
 ```plaintext
 HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 ```
 ```plaintext
-ssh bandit6na @bandit.labs.overthewire.org -p 2220
+ssh bandit6@bandit.labs.overthewire.org -p 2220
 ```
 
+# Level 6-7
+
+##### In this level, we are introduced to the big topic of Linux File Permissions. Specifically, to the area of ownership. Each file is owned by a user and a group. You can see what user and group owns a file with the ls command and its -l tag.
+
+### Example:
+
+```sh
+1 bandit6@bandit:/var/lib/dpkg/info$ ls -l bandit7.password 
+2 -rw-r----- 1 bandit7 bandit6 33 May  7  2020 bandit7.password
+```
+> #### The third column shows the user, the fourth shows the group that owns the file.As mentioned in a previous level, the find command can be used to find files on the server. It offers flags to look for files owned by a specific user (-user <username>) and a specific group (-group <groupname>)
+
+- **We use the find command with the following options:**
+
+    - type f, because we are looking for a file  
+    - user bandit7, to find files owned by the ‘bandit7’ user  
+    - group bandit6, to find files owned by the ‘bandit6’ group  
+    - size 33c, to find files of size 33 bytes
+
+## Commands
+```sh
+bandit6@bandit:~$ find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
+/var/lib/dpkg/info/bandit7.password
+bandit6@bandit:~$ cd /var/lib/dpkg/info/
+bandit6@bandit:/var/lib/dpkg/info$ cat bandit7.password 
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+bandit6@bandit:/var/lib/dpkg/info$ 
+```
+**2>/dev/null** is for error handling
+
+
+#### password :
+```plaintext
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+```
+```plaintext
+ssh bandit7@bandit.labs.overthewire.org -p 2220
+```
+# Level 7-8
+## Commands
+
+```sh
+bandit7@bandit:~$ cat data.txt | grep "millionth"
+millionth	dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+bandit7@bandit:~$ du -b data.txt 
+4184396	data.txt
+```
+#### password :
+```plaintext
+dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+```
+```plaintext
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+```
