@@ -275,3 +275,20 @@ dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 ```plaintext
 ssh bandit8@bandit.labs.overthewire.org -p 2220
 ```
+# Level 8-9
+## Commands
+```sh
+bandit8@bandit:~$ sort data.txt | uniq -u
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+```
+#### Theory
+```plaintext
+uniq is a command that filters input and writes to the output. Specifically, it filters based on identical lines. It has a flag -u, which filters for unique lines (lines that appear only ones). Another interesting functionality is, for example, that it can also count (-c) or only return duplicate lines (-d).The command is often used with sort. For uniq to filter for unique lines, the lines need to be sorted. sort sorts the lines of a text file. Furthermore, it has flags for sorting in reverse (-r) and sorting numerically (-n).
+```
+#### password :
+```plaintext
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+```
+```plaintext
+ssh bandit9@bandit.labs.overthewire.org -p 2220
+```
