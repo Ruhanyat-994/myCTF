@@ -491,3 +491,11 @@ bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ cat data8
 The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 
 ```
+## Commands
+```sh
+gzip -d <.gz file>
+tar -xf
+bzip2 -d <.bz2 file>
+// .bin are the archieve file being created by tar 
+
+```
