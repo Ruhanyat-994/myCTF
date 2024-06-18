@@ -376,3 +376,118 @@ The Linux tr command, which stands for ’translate’, allows replacing charact
 ```plaintext
 ssh bandit12@bandit.labs.overthewire.org -p 2220
 ```
+
+
+
+
+# Level 12-13
+
+```markdown
+# Hexdumps, File Types, Compression, and Archiving
+
+Hexdumps are often used when we want to look at data that cannot be represented in strings and therefore is not readable, so it is easier to look at the hex values. A hexdump has three main columns:
+
+1. The first shows the **address**.
+2. The second shows the **hex representation** of the data at that address.
+3. The last shows the **actual data as strings** (with ‘.’ representing hex values that cannot be represented as a string).
+
+Many hex editors exist; just pick the one you like most.
+
+## Using `xxd` for Hexdumps
+
+For the command line, `xxd` can be used. The command:
+```sh
+xxd <input_file> <output_file>
+```
+creates hexdumps. When using the `-r` flag, it reverts the hexdump:
+```sh
+xxd -r <input_file> <output_file>
+```
+
+## Identifying File Types with Hexdumps
+
+Hexdumps can be used to figure out the type of a file. Each file type has a **magic number/file signature**. You can find lists with collections of these different file signatures online. The `file` command, which was introduced in Level 5, also uses this method (and more beyond that). This is especially important to know because sometimes files might not have the correct or any file ending to identify its type.
+
+## Compression Methods
+
+Compression is a method of encoding that aims to reduce the original size of a file without losing information (or only losing as little as possible).
+
+### `gzip`
+
+- To compress a file:
+    ```sh
+    gzip <file>
+    ```
+- To decompress a file:
+    ```sh
+    gzip -d <file.gz>
+    ```
+
+### `bzip2`
+
+- To compress a file:
+    ```sh
+    bzip2 <file>
+    ```
+- To decompress a file:
+    ```sh
+    bzip2 -d <file.bz2>
+    ```
+
+## Archive Files
+
+An Archive File is a file that contains one or multiple files and their metadata. This can allow easier portability.
+
+### `tar`
+
+- To create an archive:
+    ```sh
+    tar -cf <archive.tar> <file1> <file2> ...
+    ```
+- To extract an archive:
+    ```sh
+    tar -xf <archive.tar>
+    ```
+
+---
+
+Hexdumps, file type identification, compression, and archiving are essential skills for handling and inspecting files efficiently in various computing environments.
+
+```sh
+this solution is a lengthy process. We have to decompress and compress the file again and again so that we can get the actual decompressed value.
+```
+
+## Commands
+```sh
+.
+.
+.
+.
+.
+.
+compressed_data.tar  data5.bin  hexdump_data
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ ls
+compressed_data.tar  data5.bin  hexdump_data
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ tar -xf da
+tar: da: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ tar -xf data5.bin
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ ls
+compressed_data.tar  data5.bin  data6.bin  hexdump_data
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ bzip2 -d data6.bin
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ ls
+compressed_data.tar  data5.bin  data6.bin.out  hexdump_data
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ 
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ tar -xf data6.bin.out
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ ls
+compressed_data.tar  data5.bin  data6.bin.out  data8.bin  hexdump_data
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ mv data8.bin data8.gz
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ gzip data8.gz
+gzip: data8.gz already has .gz suffix -- unchanged
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ gzip -d data8.gz
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ ls
+compressed_data.tar  data5.bin  data6.bin.out  data8  hexdump_data
+bandit12@bandit:/tmp/tmp.T6ddZmxbkJ$ cat data8
+The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+
+```
