@@ -350,3 +350,29 @@ dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 ```plaintext
 ssh bandit11@bandit.labs.overthewire.org -p 2220
 ```
+
+# Level 11-12
+## Command
+```sh
+bandit11@bandit:~$ ls
+data.txt
+bandit11@bandit:~$ cat data.txt 
+Gur cnffjbeq vf 7k16JArUVv5LxVuJfsSVdbbtaHGlw9D4
+bandit11@bandit:~$ tr "A-Za-z" "N-ZA-Mn-za-m"
+^C
+bandit11@bandit:~$ cat data.txt | tr "A-Za-z" "N-ZA-Mn-za-m"
+The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+```
+#### Theory
+```sh
+The Linux tr command, which stands for ’translate’, allows replacing characters with others. The base command syntax looks like the following tr <old_chars> <new_chars>.
+```
+
+#### password :
+```plaintext
+7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+```
+```plaintext
+ssh bandit12@bandit.labs.overthewire.org -p 2220
+```
