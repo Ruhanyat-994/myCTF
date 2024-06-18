@@ -292,3 +292,23 @@ uniq is a command that filters input and writes to the output. Specifically, it 
 ```plaintext
 ssh bandit9@bandit.labs.overthewire.org -p 2220
 ```
+# Level 9-10
+## Commands 
+```sh
+bandit9@bandit:~$ strings  data.txt | grep ===
+*N========== the
+========== password
+========== is
+w========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+```
+#### Theory
+```sh
+The strings command finds human-readable strings in files. Specifically, it prints sequences of printable characters. Its main use is for non-printable files like hex dumps or executables.
+```
+#### password :
+```plaintext
+FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+```
+```plaintext
+ssh bandit10@bandit.labs.overthewire.org -p 2220
+```
