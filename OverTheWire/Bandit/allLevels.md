@@ -499,3 +499,10 @@ bzip2 -d <.bz2 file>
 // .bin are the archieve file being created by tar 
 
 ```
+#### password :
+```plaintext
+FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+```
+```plaintext
+ssh bandit13@bandit.labs.overthewire.org -p 2220
+```
