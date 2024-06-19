@@ -506,3 +506,30 @@ FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 ```plaintext
 ssh bandit13@bandit.labs.overthewire.org -p 2220
 ```
+
+# Level 13-14
+## Commands
+```sh
+bandit13@bandit:~$ ls
+sshkey.private
+
+bandit13@bandit:~$ ssh -i sshkey.private -p 2220 bandit14@localhost
+bandit14@bandit:~$ ls
+bandit14@bandit:~$ cd /etc/bandit_pass/
+bandit14@bandit:/etc/bandit_pass$ ls
+bandit0   bandit13  bandit18  bandit22  bandit27  bandit31  bandit6
+bandit1   bandit14  bandit19  bandit23  bandit28  bandit32  bandit7
+bandit10  bandit15  bandit2   bandit24  bandit29  bandit33  bandit8
+bandit11  bandit16  bandit20  bandit25  bandit3   bandit4   bandit9
+bandit12  bandit17  bandit21  bandit26  bandit30  bandit5
+bandit14@bandit:/etc/bandit_pass$ cat bandit14
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+```
+#### password :
+```plaintext
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+```
+```plaintext
+ssh bandit14@bandit.labs.overthewire.org -p 2220
+```
