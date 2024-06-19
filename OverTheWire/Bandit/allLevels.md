@@ -533,3 +533,22 @@ MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
 ```plaintext
 ssh bandit14@bandit.labs.overthewire.org -p 2220
 ```
+
+# Level 14-15
+**nc or netcat is a command that allows to read and write data over a network connection. It can be used for TCP and UDP connections. To connect to a service (as client) on a network the command syntax is the following: nc <host> <port>. To create a server that listens to incoming packets, the command looks like this: nc -l <port>.**
+## Commands
+
+```sh
+bandit14@bandit:~$ nc localhost 30000
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+Correct!
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+```
+#### password :
+```plaintext
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+```
+```plaintext
+ssh bandit15@bandit.labs.overthewire.org -p 2220
+```
