@@ -1,6 +1,7 @@
 ##  This lab stores user chat logs directly on the server's file system, and retrieves them using static URLs. Solve the lab by finding the password for the user carlos, and logging into their account. 
 
-![alt text](image.png)
+![image](https://github.com/Ruhanyat-994/myCTF/assets/110297704/359fae31-77e2-4c51-98c6-c898a039143f)
+
 - We are looking into the live chat button
 - Here we can find View transcript
 - If we click that button its automatically downloaded a reply 
@@ -97,6 +98,7 @@ Hal Pline: Do one!
 - Our user name is carlos which was given in the lab manual
 - password is tqj8lryq2ssu4pek0qd3
 
-![alt text](image-1.png)
+![image-1](https://github.com/Ruhanyat-994/myCTF/assets/110297704/1d1693ec-6480-477e-b985-6e604e828414)
+
 
 # Pwned!
