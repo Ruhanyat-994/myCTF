@@ -1,4 +1,4 @@
-# Level 0
+#  Level 0
 ## Command
 ```plaintext
 
@@ -231,7 +231,7 @@ ssh bandit6@bandit.labs.overthewire.org -p 2220
 1 bandit6@bandit:/var/lib/dpkg/info$ ls -l bandit7.password 
 2 -rw-r----- 1 bandit7 bandit6 33 May  7  2020 bandit7.password
 ```
-> #### The third column shows the user, the fourth shows the group that owns the file.As mentioned in a previous level, the find command can be used to find files on the server. It offers flags to look for files owned by a specific user (-user <username>) and a specific group (-group <groupname>)
+> #### The third column shows the user, the fourth shows the group that owns the file.As mentioned in a previous level, the find command can be used to find files on the server. It offers flags to look for files owned by a specific user (-user <username>) and a specific group (-group <groupname>)    
 
 - **We use the find command with the following options:**
 
@@ -276,6 +276,7 @@ dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 ssh bandit8@bandit.labs.overthewire.org -p 2220
 ```
 # Level 8-9
+
 ## Commands
 ```sh
 bandit8@bandit:~$ sort data.txt | uniq -u
@@ -367,6 +368,9 @@ The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
 #### Theory
 ```sh
 The Linux tr command, which stands for ’translate’, allows replacing characters with others. The base command syntax looks like the following tr <old_chars> <new_chars>.
+```
+```sh
+you can also use CyberChef web application.
 ```
 
 #### password :
