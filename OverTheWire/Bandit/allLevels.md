@@ -556,3 +556,28 @@ Correct!
 ```plaintext
 ssh bandit15@bandit.labs.overthewire.org -p 2220
 ```
+
+# Level 15-16
+## Commands
+```sh
+openssl s_client -connect localhost:30001
+```
+- OpenSSL is a library for secure communication over networks. It implements the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) cryptographic protocols that are, for example, used in HTTPS to secure the web traffic.`openssl s_client` is the implementation of a simple client that connects to a server using SSL/TLS.
+
+```sh
+read R BLOCK
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+Correct!
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+
+closed
+
+```
+
+#### password :
+```plaintext
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+```
+```plaintext
+ssh bandit16@bandit.labs.overthewire.org -p 2220
+```
