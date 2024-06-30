@@ -74,7 +74,11 @@ in this form we need to give te secretKey 600 chmod permissio (600 permissions m
 
 ssh private key needs 600  permission
 
+# PrivEsc from lxc/lxd  
+
 ### **ROOT_FLAG{ }:**
+
+
 
 1. We have a shell as user `john` and now we need to find a way to escalate our privileges to root.
 
