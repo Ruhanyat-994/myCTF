@@ -6,6 +6,15 @@
 - Website : http://10.10.49.150
 - getting root privEsc : https://gtfobins.github.io/gtfobins/tar/
 
+## Pointers
+
+- There is an Image in the website which is crew.jpg
+- I was trying to decode it with steghide but it needs a passphress
+- From the ftp we get a list 
+- it seems it can be bruteForced
+- And there is also a ssh server's port is open
+
+> ### Answer : `ssh`
 ## Ports 
 ```sh
 └─$ sudo nmap -sS -sV -O 10.10.49.150 >> ports.txt
@@ -377,15 +386,7 @@ THM{80UN7Y_h4cK3r}
 
 ```
 
-## Pointers
 
-- There is an Image in the website which is crew.jpg
-- I was trying to decode it with steghide but it needs a passphress
-- From the ftp we get a list 
-- it seems it can be bruteForced
-- And there is also a ssh server's port is open
-
-> ### Answer : `ssh`
 
 ## Flags
 > ### **User: `THM{CR1M3_SyNd1C4T3}`**
