@@ -36,18 +36,61 @@ python3 -m http.server 80
 ```sh
 steghide extract -sf <PictureName>
 ```
-
+- #### For seeing what is running on a file `we can check if there is any root process is running on a folder or not`
+```sh
+ps aux
+```
 
 
 
 ### FTP Commands
+- #### Downloding from  `ftp` to `local`
 ```sh
 mget <filename>
 mget *
 mget *.fileextention
 ```
-- `mget` will download file from the ftp to your local machine
-
+- #### Alternative of `cat`
+```sh
+ftp> get file.txt -
+```
+- 
 
 ## Scripts
+
+
+## PrivEsc
+
+- #### **Finding info in the crontab**
+```sh
+cat /etc/crontab 
+```
+
+- #### Searching for `Bash History`
+```sh
+ls -la /etc/cron.daily/
+```
+
+
+## Links 
+
+- #### **Audio Decoder**
+    - [Morsecode](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
+
+- #### **Password Decoder**
+    - [Check Psychobreak](https://www.cachesleuth.com/vanity.html)
+
+- #### Reverse Shell `These will give you ROOT` 
+    - [GTFOBINS](https://gtfobins.github.io/)
+    - [PentestMonkey](https://github.com/pentestmonkey)
+
+
+
+## Brute Forcing
+
+- #### Hydra for SSH password bruteforce
+```sh
+hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
+```
+
 
