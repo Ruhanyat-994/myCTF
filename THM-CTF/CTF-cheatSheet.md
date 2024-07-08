@@ -137,7 +137,10 @@ nc -nlvp <port_number>
 
 - #### HashDecoder
     - [hash killer](https://hashkiller.io/listmanager)
-
+- #### Vulnerability or CVE detection
+    - [AttackerKB](https://attackerkb.com/)
+    - [AttackerKB TOOL](https://github.com/horshark/akb-explorer)
+    - TOOl SearchSploit
 
 ## Brute Forcing
 
@@ -147,3 +150,5 @@ hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
 ```
 
 
+## TIPS
+- **Try To know the Current Versions of SSH,UBUNTU,FTP etc**
