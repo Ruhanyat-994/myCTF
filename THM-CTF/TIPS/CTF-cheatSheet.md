@@ -11,6 +11,13 @@ nmap -sS -sV -O <ip> >> ports.txt
 ```sh
 nmap -A -p <ports that we found from normal scan> >> ports.txt
 ```
+```sh
+nmap -A -p- -Pn <ip> -v
+```
+- For scanning top 100 ports and slowing down the scan for hiding from attention 
+```sh
+nmap -A -F -T2 <ip> -v
+```
 
 ### Directory Enumeration
 
