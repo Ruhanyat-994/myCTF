@@ -51,6 +51,7 @@ ps aux
 ```ls
 find / -group users -type f 2>/dev/null
 ```
+- #### Alternative of `sudo su` is `sudo bash`
 - #### Finding a File
 ```sh
 find / -type f -name user.txt 2> /dev/null
@@ -141,6 +142,7 @@ nc -nlvp <port_number>
 - #### Reverse Shell `These will give you ROOT` 
     - [GTFOBINS](https://gtfobins.github.io/)
     - [PentestMonkey](https://github.com/pentestmonkey)
+    - [Pentest Monkey website](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 
 - #### HashDecoder
     - [hash killer](https://hashkiller.io/listmanager)
