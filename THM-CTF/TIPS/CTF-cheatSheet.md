@@ -124,6 +124,7 @@ nc -nlvp <port_number>
 - #### **Audio Decoder**
     - [Morsecode](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
     - [For more accurate](https://www.sonicvisualiser.org/download.html)
+    - [dcode](https://www.dcode.fr/spectral-analysis)
 
 - #### **Password Decoder**
     - [Check Psychobreak](https://www.cachesleuth.com/vanity.html)
