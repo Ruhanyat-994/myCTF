@@ -154,4 +154,4 @@ hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
 - **Try To know the Current Versions of SSH,UBUNTU,FTP etc**
 
 ## Important WriteUps
-    - [stefanBargan](https://stefanbargan.medium.com/)
+- [stefanBargan](https://stefanbargan.medium.com/)
