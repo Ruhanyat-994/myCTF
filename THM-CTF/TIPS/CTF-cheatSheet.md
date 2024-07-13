@@ -155,3 +155,5 @@ hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
 
 ## Important WriteUps
 - [stefanBargan](https://stefanbargan.medium.com/)
+- [Aperi](https://www.zeecka.fr/cat/steganography/)
+- [cheatsheet](https://www.aperisolve.com/cheatsheet)
