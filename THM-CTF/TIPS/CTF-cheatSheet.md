@@ -125,7 +125,8 @@ nc -nlvp <port_number>
     - [Morsecode](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
     - [For more accurate](https://www.sonicvisualiser.org/download.html)
     - [dcode](https://www.dcode.fr/spectral-analysis)
-
+- #### Stegnography
+    - [steghide webapp](https://www.aperisolve.com/)
 - #### **Password Decoder**
     - [Check Psychobreak](https://www.cachesleuth.com/vanity.html)
 
@@ -151,3 +152,6 @@ hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
 
 ## TIPS
 - **Try To know the Current Versions of SSH,UBUNTU,FTP etc**
+
+## Important WriteUps
+    - [stefanBargan](https://stefanbargan.medium.com/)
