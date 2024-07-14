@@ -25,7 +25,9 @@ nmap -A -F -T2 <ip> -v
 ```sh
 gobuster dir -u http://targetIp -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o directory.txt
 ```
-
+```sh
+gobuster dir -u <url-with-http> -w /usr/share/wordlists/dirb/common.txt -o directory.txt 
+```
 
 ### Some Important commands
 
