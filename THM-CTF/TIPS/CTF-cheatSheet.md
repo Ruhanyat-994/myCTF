@@ -121,6 +121,11 @@ nc -nlvp <port_number>
 ```ls
 /usr/share/webshell/
 ```
+## Avoiding Read and Write Protection
+- Copy the protectd file to another file
+- Remove the original file
+
+
 ## Links 
 
 - #### **Audio Decoder**
