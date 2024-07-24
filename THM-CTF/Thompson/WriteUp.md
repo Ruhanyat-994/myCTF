@@ -41,19 +41,19 @@ Nmap done: 1 IP address (1 host up) scanned in 89.38 seconds
 - We found there is a http apache tomcat server 
 - we know that tomcat is used for java server pages  
 
-[tomcat penetration testing ](https://www.hackingarticles.in/tomcat-penetration-testing/)
+![image](https://github.com/user-attachments/assets/6c7f619e-acf2-4724-a287-fe0ea1a18746)
 
 - If we go to the port `10.10.25.211:8080` we can have a tomcat page
 
-![alt text](/Thompson/photos/image.png)
+![image1](https://github.com/user-attachments/assets/5901ced1-e07c-4aab-b432-8c890a7f2927)
 
 - If we click the manager app it is giving us a login page
 
-![alt text](/Thompson/photos/image1.png)
+![image2](https://github.com/user-attachments/assets/fc21d05b-7413-4b59-bc66-53c29e4a7bb0)
 
 - If we cancel the pop-up it is giving us an error
 
-![alt text](/Thompson/photos/image2.png)
+![image3](https://github.com/user-attachments/assets/f18ee47f-dbaa-4f70-8eef-a659eeb4aab4)
 
 - Here we can have the password
     - name:`tomcat`
@@ -61,7 +61,7 @@ Nmap done: 1 IP address (1 host up) scanned in 89.38 seconds
 
 - In the manager page we can add WAR files from our system
 
-![alt text](/Thompson/photos/image3.png)
+![image3](https://github.com/user-attachments/assets/38885196-c66f-417b-b75d-0b86ebc12280)
 
 - Now we will write a reverse shell or we can use the metaspoitable tool 
 
@@ -69,7 +69,7 @@ Nmap done: 1 IP address (1 host up) scanned in 89.38 seconds
 
 - We are doing through manual reverse shell
 
-![alt text](/Thompson/photos/image4.png)
+![image4](https://github.com/user-attachments/assets/69bed96f-bd30-40a9-9055-b7107408b100)
 
 - we will deploy the shell 
 
