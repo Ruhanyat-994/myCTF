@@ -60,9 +60,17 @@ Progress: 4614 / 4615 (99.98%)
 ===============================================================
 Finished
 ===============================================================
+  
+
 
 
 ```
+## Webpage
+- After trying to get into ` http://10.10.132.204` this
+- we found a name `(meliodas)` who worte a blog on that website
+- Lets assume it is a username for ssh
+- Now we need a password
+
 - If we go to the url `http://10.10.132.204/robots.txt`
 ```sh
 User-agent: rockyou 
@@ -72,11 +80,7 @@ Disallow: /
 - In this hint we can assume that we have to bruteFroce the name `meliodas` with the in built `rockyou` file
 - we can use `hydra`
 
-## Webpage
-- After trying to get into ` http://10.10.132.204` this
-- we found a name `(meliodas)` who worte a blog on that website
-- Lets assume it is a username for ssh
-- Now we need a password
+
 
 
 ## BruteFrocing the ssh server

