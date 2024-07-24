@@ -164,3 +164,4 @@ hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
 - [stefanBargan](https://stefanbargan.medium.com/)
 - [Aperi](https://www.zeecka.fr/cat/steganography/)
 - [cheatsheet](https://www.aperisolve.com/cheatsheet)
+- [Tomcat Penetration Testing](https://www.hackingarticles.in/tomcat-penetration-testing/)
