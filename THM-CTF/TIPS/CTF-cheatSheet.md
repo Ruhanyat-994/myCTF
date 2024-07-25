@@ -28,6 +28,17 @@ gobuster dir -u http://targetIp -w /usr/share/wordlists/dirbuster/directory-list
 ```sh
 gobuster dir -u <url-with-http> -w /usr/share/wordlists/dirb/common.txt -o directory.txt 
 ```
+### SearchSploit
+- **Basic Search**
+```sh
+searchsploit 'version name'
+```
+- **Searching Through Nmap Results**
+    - **save the nmap results file in .xml format**
+    - Example: `nmap -A -p- -oA results.xml <ip>`
+```sh
+searchsploit --nmap -v results.xml
+```
 
 ### Some Important commands
 
@@ -155,6 +166,7 @@ nc -nlvp <port_number>
 ```sh
 hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
 ```
+- **For ports we can use `-p <portnumber>`**
 
 
 ## TIPS
