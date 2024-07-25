@@ -84,18 +84,18 @@ Starting gobuster in directory enumeration mode
 
 - `http://10.10.170.79/simple/` for this one we are getting a webserver 
 
-![alt text](/SimpleCTF/Photos/image.png)
+![image](https://github.com/user-attachments/assets/3da0bdf9-69cf-4e2b-9a1d-0abcd5389f9e)
 
 - There is a Username here
 
-![alt text](/SimpleCTF/Photos/image1.png)
+![image1](https://github.com/user-attachments/assets/12cb3abf-30af-44f0-9d38-981c7005054d)
 
 - UserName is `mitch`
 - It could be a username for the ssh login
 
 - After scrolling a little bit I found the version of the site generator.
 
-![alt text](/SimpleCTF/Photos/image2.png)
+![image2](https://github.com/user-attachments/assets/a7b350e2-9919-4a67-82d4-9f6e66387f39)
 
 - **CMS Made Simple version 2.2.8** 
 
