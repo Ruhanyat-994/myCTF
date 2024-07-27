@@ -1,4 +1,4 @@
-# Lazy Admin
+![image2](https://github.com/user-attachments/assets/bd4dede4-bcb5-4dc9-b04e-80942c837d4c)# Lazy Admin
 
 ## Recon
 ### Port Scanning
@@ -44,7 +44,7 @@ Nmap done: 1 IP address (1 host up) scanned in 21.32 seconds
 ```
 
 
-![alt text](/THM-CTF/LazyAdmin/photos/image.png)
+![image](https://github.com/user-attachments/assets/7090c604-8eb5-40a8-bff5-f864552e4a68)
 
 - The site has been powered by `Sweetrice`
 - Lets find some Vulnerability of It using `searchsploit`
@@ -109,7 +109,7 @@ http://localhost/inc/mysql_backup
 
 - Lets try `http://10.10.141.120/content/inc//mysql_backup`
 
-![alt text](/THM-CTF/LazyAdmin/photos/image1.png)
+![image1](https://github.com/user-attachments/assets/0824843a-b7f4-4332-b163-6d4aba62e3f9)
 
 ### Checking For password
 
@@ -135,15 +135,16 @@ http://localhost/inc/mysql_backup
 >## Password : `Password123`
 
 - ``
-![alt text](image2.png)
+![image2](https://github.com/user-attachments/assets/af5d40bf-22f9-4fec-8df3-a74c2a4c7baf)
+
 
 - After Login it gave me
 
-![alt text](image3.png)
+![image3](https://github.com/user-attachments/assets/3d7bbce7-dd58-4196-a4d0-555f35665fe1)
 
 - In the `media center` there is an option for upload
 
-![alt text](image4.png)
+![image4](https://github.com/user-attachments/assets/dd11af56-293d-4fce-b5d4-e27501ed4f20)
 
 - Its High time I didn't use the php shell buddy!
 
