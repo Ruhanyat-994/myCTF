@@ -155,6 +155,7 @@ nc -nlvp <port_number>
 
 - #### HashDecoder
     - [hash killer](https://hashkiller.io/listmanager)
+    - [Crack Station](https://crackstation.net/)
 - #### Vulnerability or CVE detection
     - [AttackerKB](https://attackerkb.com/)
     - [AttackerKB TOOL](https://github.com/horshark/akb-explorer)
