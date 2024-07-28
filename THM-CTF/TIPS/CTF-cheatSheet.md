@@ -164,6 +164,17 @@ nc -nlvp <port_number>
 hash-identifier        
 ```
 
+### Ip 2 Name
+```sh
+sudo nano /etc/hosts
+```
+```sh
+ip    name
+```
+```sh
+ping name
+```
+
 ## Links 
 
 - #### **Audio Decoder**
