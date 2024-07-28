@@ -39,6 +39,29 @@ searchsploit 'version name'
 ```sh
 searchsploit --nmap -v results.xml
 ```
+### JohnTheRipper
+
+- **Chaning a human un-redable format to human readable format**
+```sh
+gpg2john <human non-readable> > <human readable file>
+```
+- Or you may say `john` readable
+```sh
+sudo john <human readable file>
+```
+```sh
+sudo john --wordlist=/usr/share/wordlists/rockyou.txt root2boot
+```
+
+### gpg 
+- **Import**
+```sh
+gpg --import <file>   
+```
+- **Decrypt**
+```sh
+gpg --decrypt <file name>
+```
 
 ### Some Important commands
 
@@ -136,6 +159,10 @@ nc -nlvp <port_number>
 - Copy the protectd file to another file
 - Remove the original file
 
+### Identifying Hash
+```sh
+hash-identifier        
+```
 
 ## Links 
 
