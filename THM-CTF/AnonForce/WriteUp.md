@@ -134,7 +134,7 @@ remote: user.txt
 
 ```
 
-> ## user.txt : 606083fd33beb1284fc51f411a706af8``
+> ## user.txt : `606083fd33beb1284fc51f411a706af8`
 
 - **There is a directory called notread . The name seems suspicious to me**
 ```sh
