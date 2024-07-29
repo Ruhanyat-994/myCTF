@@ -204,6 +204,7 @@ ping name
     - [GTFOBINS](https://gtfobins.github.io/)
     - [PentestMonkey](https://github.com/pentestmonkey)
     - [Pentest Monkey website](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
+    - [swisskyrepo](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/)
 
 - #### HashDecoder
     - [hash killer](https://hashkiller.io/listmanager)
