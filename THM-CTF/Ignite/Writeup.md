@@ -20,7 +20,7 @@ PORT   STATE SERVICE VERSION
 ### Post Scanning
 - As port 80 is open it means there is a webserver there
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/e683ec1a-b74e-4c0b-8396-b094bbf434f6)
 
 - **In the site there are many information there**
 
@@ -69,15 +69,15 @@ PORT   STATE SERVICE VERSION
 ```
 - **Lets try this one `robots.txt`**
 
-![alt text](image-1.png)
+![image-1](https://github.com/user-attachments/assets/ee43314c-b062-4805-b8f8-ed26310a21e0)
 
 - **Its indicating the same `/fuel/` directory**
 
 - **But in the main website there is a direction about the `/fuel`**
 
-![alt text](image-2.png)
+![image-2](https://github.com/user-attachments/assets/5934d8c1-9c2e-40ad-8439-87d1c5dfea40)
 
-![alt text](image-3.png)
+![image-3](https://github.com/user-attachments/assets/1857bcba-d4bd-48f8-a385-a4d75dc78e07)
 
 - **There are many things are in there**
 - **I tried .php reverse shell into all the upload sections but doesn't happened anything**
@@ -206,7 +206,7 @@ system/bin/bash
 ```
 - **There is bash so we can try the reverse shell of bash**
 
-![alt text](image-4.png)
+![image-4](https://github.com/user-attachments/assets/4d43e574-3057-4b75-9b88-27ef912431f4)
 - [Link](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
 - **I'm using pentestMonkeys rev. shell**
 
@@ -293,7 +293,7 @@ www-data@ubuntu:/var/www/html$ sudo -l
 - **Its seeking pass word now**
 
 - **Remember! there was a hint of the data-base of the webserver**
-![alt text](image-5.png)
+![image-5](https://github.com/user-attachments/assets/f071fb3d-429e-4a46-8e2c-cd96e0889193)
 - **Lets get into it**
 
 - **In the `www-data@ubuntu:/var/www/html/fuel/application/config$` directory we get the password**
