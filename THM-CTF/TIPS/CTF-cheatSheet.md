@@ -123,11 +123,25 @@ cat /etc/crontab
 ```sh
 ls -la /etc/cron.daily/
 ```
+
 ## Reverse Shell
 - Starting listener
 ```sh
 nc -nlvp <port_number>
 ```
+## Getting the terminal Shell
+- **Some time the terminal shell is not given then we have to do this!**
+```sh
+python -c "import pty; pty.spawn('/bin/bash')"
+
+stty raw -echo
+```
+## Getting into As a Root User
+```sh
+su root
+```
+- **We must need the password here**
+
 ### PHP reverse-shell
 ```ls
 /usr/share/webshell/
