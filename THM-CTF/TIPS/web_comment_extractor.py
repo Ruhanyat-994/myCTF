@@ -1,7 +1,7 @@
-
+# Download this file 
 # pip install requests beautifulsoup4
 # usage: $ python3 websites-comment-extractor.py
-# Enter the website URL: https://example.com/
+
 
 
 import requests
