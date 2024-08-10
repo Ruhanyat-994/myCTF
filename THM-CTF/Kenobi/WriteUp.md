@@ -21,9 +21,9 @@ No exact OS matches for host (If you know what OS is running on it, see https://
 
 ```
 ### Samba
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/9272d0a8-8aa8-4363-be39-e082568b9d88)
 - **Samba is the standard Windows interoperability suite of programs for Linux and Unix. It allows end users to access and use files, printers and other commonly shared resources on a companies intranet or internet. Its often referred to as a network file system. Samba is based on the common client/server protocol of Server Message Block (SMB). SMB is developed only for Windows, without Samba, other computer platforms would be isolated from Windows machines, even if they were part of the same network.**
-![alt text](image-1.png)
+![image-1](https://github.com/user-attachments/assets/529e7cf2-d792-4d14-8076-d82c0042b8fa)
 ```sh
 └─$ nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.75.33
 
@@ -78,7 +78,7 @@ smbget -R smb://10.10.75.33/anonymous
 
 ### RPCbind
 
-![alt text](image-2.png)
+![image-2](https://github.com/user-attachments/assets/4950019a-f3a0-41fc-8d45-2be2a2b82efe)
 ```sh
 └─$ nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.75.33
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-08-09 21:33 EDT
@@ -113,7 +113,7 @@ ProFTPd 1.3.5 - File Copy                        | linux/remote/36742.txt
 -----------------------------
 ```
 
-![alt text](image-3.png)
+![image-3](https://github.com/user-attachments/assets/f7fe6588-239c-4085-87e0-1464d5efe99e)
 
 ```sh
 └─$ nc kenobi 21
@@ -216,7 +216,7 @@ d0b0f3f53b6caa532a83915e19224899
 
 ### PrivEsc
 
-![alt text](image-4.png)
+![image-4](https://github.com/user-attachments/assets/20d57f71-ddb3-463b-a0f0-9f0bd1b42301)
 
 ```sh
 kenobi@kenobi:~$ cd /tmp
