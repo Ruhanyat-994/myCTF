@@ -217,7 +217,7 @@ ping name
     - [swisskyrepo](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/)
 
 - #### HashDecoder
-    - [hash killer](https://hashkiller.io/listmanager)
+    - [hash killer](https://hashkiller.io/listmanager) -> **It worked good for SHA-256 decode**
     - [Crack Station](https://crackstation.net/)
 - #### Vulnerability or CVE detection
     - [AttackerKB](https://attackerkb.com/)
