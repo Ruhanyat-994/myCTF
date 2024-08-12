@@ -135,7 +135,7 @@ Exploit target:
 
 - Our php reverse shell has been attached there lets try it
 
-- I should work but its not working . As we have password and the username we can get into webdav terminal thorough our kali machine
+- It should work but its not working . As we have password and the username we can get into webdav terminal thorough our kali machine
 
 ```sh
 └─$ cadaver http://10.10.236.5/webdav/
