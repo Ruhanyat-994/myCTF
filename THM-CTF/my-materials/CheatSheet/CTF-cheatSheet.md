@@ -87,6 +87,11 @@ ps aux
 ```ls
 find / -group users -type f 2>/dev/null
 ```
+- #### Finding Many files all togather
+```sh
+find / -type f \( -name 8V2L.txt -o -name bny0.txt -o -name D8B3.txt \) 2>>/dev/null
+
+```
 - #### Alternative of `sudo su` is `sudo bash`
 - #### Finding a File
 ```sh
