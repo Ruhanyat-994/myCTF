@@ -18,6 +18,12 @@ nmap -A -p- -Pn <ip> -v
 ```sh
 nmap -A -F -T2 <ip> -v
 ```
+- For scanning with customizable packets
+```sh
+nmap -sC -sV -p- -T4 --min-rate=[packet size] -vv [MACHINE IP]
+```
+**Example:`nmap -sC -sV -p- -T4 --min-rate=10000 -vv 192.165.11.23`**
+- It will speed up the scan but will be noticeable to the target
 
 ### Directory Enumeration
 
