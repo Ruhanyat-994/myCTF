@@ -15,7 +15,7 @@
 - After enumerating a little bit about RPC I didn't found any vulnerability for that particular version
 
 - In the webpage we found this!
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/43c5139e-eba7-4b08-93ed-8ae2466ef88f)
 - But I didn't find any important info in the comment on its source-code
 
 **Directory Enumeration**
@@ -24,7 +24,7 @@
 
 /island
 ```
-![alt text](image-1.png)
+![image-1](https://github.com/user-attachments/assets/7e6badb5-16cd-409f-8b68-30884514c59b)
 - We found an important code word - `vigilante`
 - I searched about this word but found noting interesting
 
@@ -35,7 +35,7 @@
 ```
 - `http://10.10.173.121/island/2100/` here we found a video but its been deleted
 
-![alt text](image-2.png)
+![image-2](https://github.com/user-attachments/assets/a2de7b97-7d4b-447c-aa23-04406d3e0bb4)
 
 - There is a hint here `you can avail your .ticket here but how?`. Its telling us to avail something which has `.ticket` extension.
     - **It seems we need to scan for web content in this directory**
@@ -62,7 +62,7 @@
 
 
 ``` 
-![alt text](image-3.png)
+![image-3](https://github.com/user-attachments/assets/8d9715c2-1af0-487d-8a64-0b4dc5168313)
 - I think it could be a password for ftp or ssh
 - Remember we found a code word 
 - After using `vigilante` as username and `RTy8yhBQdscX` as password we found nothing at both ssh and ftp
@@ -70,7 +70,7 @@
 - As I searched online I found that `RTy8yhBQdscX` is a base58 hash Lets crack it!
 
 
-![alt text](image-4.png)
+![image-4](https://github.com/user-attachments/assets/b4b328c0-1e7a-42ab-b9fd-a1c897ffc57e)
 - Password - `!#th3h00d`
 
 - Lets Try with FTP first
