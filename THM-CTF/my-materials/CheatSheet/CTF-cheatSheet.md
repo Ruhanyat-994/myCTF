@@ -240,6 +240,9 @@ ping name
 
 ## Links 
 
+- #### **Extension Convert for Hex code**
+    - [Wiki](https://en.wikipedia.org/wiki/List_of_file_signatures?source=post_page-----8a8080672083--------------------------------)
+
 - #### **Audio Decoder**
     - [Morsecode](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
     - [For more accurate](https://www.sonicvisualiser.org/download.html)
