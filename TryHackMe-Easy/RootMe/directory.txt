@@ -1,0 +1,4 @@
+/uploads             [36m (Status: 301)[0m [Size: 314][34m [--> http://10.10.164.87/uploads/][0m
+/css                 [36m (Status: 301)[0m [Size: 310][34m [--> http://10.10.164.87/css/][0m
+/js                  [36m (Status: 301)[0m [Size: 309][34m [--> http://10.10.164.87/js/][0m
+/panel               [36m (Status: 301)[0m [Size: 312][34m [--> http://10.10.164.87/panel/][0m
