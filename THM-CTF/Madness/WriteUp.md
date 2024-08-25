@@ -15,14 +15,13 @@
 
 - `[http://mad](http://mad/)/`   here we found that the webserver is running on Apache2
 
-![image.png](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/image.png)
-
+![](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_07-45.bmp)
 - The purple dot is an image but the image is not opening.
 - [`http://mad/thm.jpg`](http://mad/thm.jpg)  lets download the image.
 
 ## THM Given Image
 
-![5iW7kC8.jpg](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/5iW7kC8.jpg)
+![5iW7kC8](https://github.com/user-attachments/assets/1969b533-79b2-4437-9d22-3c5677827aaf)
 
 - If we extract this image we find some interesting things like a `.out` file and a `password.txt` file
 
@@ -56,47 +55,47 @@ Here take my password
 └─$ hexeditor thm.jpg 
 ```
 
-![image.png](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/image%201.png)
+![image.png](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_08-42.bmp)
 
 ```bash
 ┌──(bc-here㉿kali)-[~/CTF{}/THM/madness]
 └─$ open thm.jpg  
 ```
 
-![2024-08-24_08-43.bmp](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/2024-08-24_08-43.bmp)
+![2024-08-24_08-43.bmp](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_08-43.bmp)
 
 ## Hidden Directory
 
-![image.png](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/image%202.png)
+![image.png](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_08-47.bmp)
 
-![image.png](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/image%203.png)
+![image.png](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_08-49.bmp)
 
 - There is a semicolon after `Secret Entered:` and the comment is saying that the secret key will be from `0-99`
 - Lets bruteFroce that using `burpsuite`
 
-![image.png](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/image%204.png)
+![image.png](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_09-18.bmp)
 
 - `/?secret=`  parameter also work for the secret entry.
 - So now we can bruteFroce from 0-99 in this paramater in the burp intuder
 
-![image.png](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/image%205.png)
+![image.png](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_09-38.bmp)
 
-![image.png](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/image%206.png)
+![image.png](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_09-47.bmp)
 
 - I went for 73 because its the longest!
 - Urgh, you got it right! But I won't tell you who I am! `y2RPJ4QaPF!B`
 
-![image.png](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/image%207.png)
+![image.png](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_09-47.bmp)
 
 - username → wbxre
 
 ## SSH Login
 
-![2024-08-24_09-51.bmp](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/2024-08-24_09-51.bmp)
+![2024-08-24_09-51.bmp](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_09-51.bmp)
 
 ## User Flag
 
-![image.png](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/image%208.png)
+![image.png](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_09-53.bmp)
 
 ## Getting Privilege
 
@@ -219,7 +218,7 @@ root
 
 ## Root Flag
 
-![image.png](Madness(THM)%201a46c9ed6e9b41c98c3905d65692574b/image%209.png)
+![image.png](https://github.com/Ruhanyat-994/myCTF/raw/master/THM-CTF/Madness/Photos/2024-08-24_10-02.bmp)
 
 ## Potential Creds
 
