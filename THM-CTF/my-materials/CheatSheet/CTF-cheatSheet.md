@@ -120,7 +120,11 @@ mget *.fileextention
 ```sh
 ftp> get file.txt -
 ```
-
+### Curl
+- #### Mining String from Html Through Curl
+```sh
+curl -s http://(IP/URL)/ | grep hidden
+```
 ### WebDav
 ```sh
 └─$ cadaver http://<target_ip>/webdav/
