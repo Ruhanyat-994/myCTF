@@ -59,6 +59,11 @@ sudo john <human readable file>
 sudo john --wordlist=/usr/share/wordlists/rockyou.txt root2boot
 ```
 
+### Base64
+```sh
+echo -n "hashed-value" | base64 -d
+```
+
 ### gpg 
 - **Import**
 ```sh
