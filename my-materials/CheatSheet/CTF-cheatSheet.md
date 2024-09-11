@@ -59,6 +59,11 @@ sudo john <human readable file>
 sudo john --wordlist=/usr/share/wordlists/rockyou.txt root2boot
 ```
 
+### Base64
+```sh
+echo -n "hashed-value" | base64 -d
+```
+
 ### gpg 
 - **Import**
 ```sh
@@ -115,7 +120,11 @@ mget *.fileextention
 ```sh
 ftp> get file.txt -
 ```
-
+### Curl
+- #### Mining String from Html Through Curl
+```sh
+curl -s http://(IP/URL)/ | grep hidden
+```
 ### WebDav
 ```sh
 └─$ cadaver http://<target_ip>/webdav/
@@ -240,6 +249,9 @@ ping name
 
 ## Links 
 
+- #### **Extension Convert for Hex code**
+    - [Wiki](https://en.wikipedia.org/wiki/List_of_file_signatures?source=post_page-----8a8080672083--------------------------------)
+
 - #### **Audio Decoder**
     - [Morsecode](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
     - [For more accurate](https://www.sonicvisualiser.org/download.html)
@@ -258,6 +270,7 @@ ping name
 - #### HashDecoder
     - [hash killer](https://hashkiller.io/listmanager) -> **It worked good for SHA-256 decode**
     - [Crack Station](https://crackstation.net/)
+    - [md5hashing.net](https://md5hashing.net/hash/md5/a18672860d0510e5ab6699730763b250) -> **It worked good for MD-5 decode**
 - #### Vulnerability or CVE detection
     - [AttackerKB](https://attackerkb.com/)
     - [AttackerKB TOOL](https://github.com/horshark/akb-explorer)
