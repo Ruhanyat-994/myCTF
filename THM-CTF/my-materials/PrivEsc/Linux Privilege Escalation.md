@@ -213,7 +213,9 @@ LFILE=/home/ubuntu/flag3.txt
 - Then finding its exploit you can rock it!
 
 ### Cronjob
-
+```sh
+cat /etc/crontab
+```
 - The idea is quite simple; if there is a scheduled task that runs with root privileges and we can change the script that will be run, then our script will run with root privileges.
 
 - Find if there is any shell exits in the cronjob or not.
