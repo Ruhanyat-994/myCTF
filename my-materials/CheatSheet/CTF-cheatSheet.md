@@ -50,6 +50,10 @@ searchsploit --nmap -v results.xml
 ```sh
 wpscan --url http://<ip>/wordpress/ -e u
 ```
+- **All Plugins Enum**
+```sh
+ wpscan --url http://<ip>/wordpress/ -e ap
+```
 ### JohnTheRipper
 
 - **Chaning a human un-redable format to human readable format**
