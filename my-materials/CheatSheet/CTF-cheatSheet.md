@@ -209,6 +209,9 @@ ls -la /etc/cron.daily/
 ```sh
 nc -nlvp <port_number>
 ```
+```sh
+rlwrap nc -nlvp 4444
+```
 ## Getting the terminal Shell
 - **Some time the terminal shell is not given then we have to do this!**
 ```sh
