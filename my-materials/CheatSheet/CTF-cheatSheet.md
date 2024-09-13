@@ -45,6 +45,11 @@ searchsploit 'version name'
 ```sh
 searchsploit --nmap -v results.xml
 ```
+### WordPress Enumeration
+- **Username Enum**
+```sh
+wpscan --url http://<ip>/wordpress/ -e u
+```
 ### JohnTheRipper
 
 - **Chaning a human un-redable format to human readable format**
