@@ -24,7 +24,10 @@ nmap -sC -sV -p- -T4 --min-rate=[packet size] -vv [MACHINE IP]
 ```
 **Example:`nmap -sC -sV -p- -T4 --min-rate=10000 -vv 192.165.11.23`**
 - It will speed up the scan but will be noticeable to the target
-
+- For scanning wordpress vulnerable plugins
+```sh
+ nmap -p 80 -vv --script http-wordpress-enum --script-args type="plugins",search-limit=1500 <target-ip> >> vuln_plugin.txt
+```
 ### Directory Enumeration
 
 - #### **Gobuster**
