@@ -49,6 +49,10 @@ searchsploit 'version name'
 searchsploit --nmap -v results.xml
 ```
 ### WordPress Enumeration
+- Checking If wordpress or not
+```sh
+ curl -s <target-url> | grep -i wordpress
+```
 - **Username Enum**
 ```sh
 wpscan --url http://<ip>/wordpress/ -e u
