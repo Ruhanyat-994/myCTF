@@ -119,6 +119,9 @@ ps aux
 ```ls
 find / -group users -type f 2>/dev/null
 ```
+```sh
+find / -type f -user <user-name> -exec ls {} + 2>/dev/null
+```
 - #### Finding Many files all togather
 ```sh
 find / -type f \( -name 8V2L.txt -o -name bny0.txt -o -name D8B3.txt \) 2>>/dev/null
@@ -201,10 +204,6 @@ python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SO
 ```
 ## PrivEsc
 
-- Finding Things Related User
-```sh
- find / -type f -user <user-name> -exec ls {} + 2>/dev/null
-```
 #### My Notes
 - [PrivEsc](https://github.com/Ruhanyat-994/myCTF/tree/master/THM-CTF/my-materials/PrivEsc)
 
