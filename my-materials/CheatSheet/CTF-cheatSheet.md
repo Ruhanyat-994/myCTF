@@ -280,6 +280,8 @@ ping name
 
 ## Links 
 
+- #### **Payloads**
+    - [PaloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
 - #### **Extension Convert for Hex code**
     - [Wiki](https://en.wikipedia.org/wiki/List_of_file_signatures?source=post_page-----8a8080672083--------------------------------)
 
@@ -297,6 +299,7 @@ ping name
     - [PentestMonkey](https://github.com/pentestmonkey)
     - [Pentest Monkey website](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
     - [swisskyrepo](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/)
+    - [ReverseShellGenerator](https://www.revshells.com/)
 
 - #### HashDecoder
     - [hash killer](https://hashkiller.io/listmanager) -> **It worked good for SHA-256 decode**
