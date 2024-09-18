@@ -74,6 +74,11 @@ sudo john <human readable file>
 ```sh
 sudo john --wordlist=/usr/share/wordlists/rockyou.txt root2boot
 ```
+- SSH BruteForce Using Private Key
+```sh
+ssh2john id_rsa > ssh.hash
+sudo john ssh.hash --wordlist=/usr/share/wordlists/rockyou.txt
+```
 
 ### Base64
 ```sh
