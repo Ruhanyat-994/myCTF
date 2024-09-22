@@ -125,7 +125,10 @@ find / -type f -user <user-name> -exec ls {} + 2>/dev/null
 - #### Finding Many files all togather
 ```sh
 find / -type f \( -name 8V2L.txt -o -name bny0.txt -o -name D8B3.txt \) 2>>/dev/null
-
+```
+- #### Find files which are given +x permission
+```sh
+find /directory/path/files -type f -perm /+x
 ```
 - #### Alternative of `sudo su` is `sudo bash`
 - #### Finding a File
