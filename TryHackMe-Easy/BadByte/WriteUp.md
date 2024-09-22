@@ -119,7 +119,9 @@ socks5          127.0.0.1 1337
 ```
 1. The hint was to use `socks5          127.0.0.1 1337` this port so we changed it from our machine
 2. Now I will scan the internal ports of the target networks From my machine
-
+```sh
+ssh -D 1337 errorcursor@bad.thm
+```
 **Internal Port Scanning**
 ```sh
 ┌──(bc-here㉿BC-Here)-[~/CTF/THM/BadByte]
