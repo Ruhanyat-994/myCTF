@@ -61,6 +61,11 @@ wpscan --url http://<ip>/wordpress/ -e u
 ```sh
  wpscan --url http://<ip>/wordpress/ -e ap
 ```
+### Fuzzing 
+- subdomains
+```sh
+wfuzz -c -w subdomains -u "FUZZ[.]target" --sc 200,301,301,401 -Z
+```
 ### JohnTheRipper
 
 - **Chaning a human un-redable format to human readable format**
