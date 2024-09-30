@@ -64,7 +64,11 @@ wpscan --url http://<ip>/wordpress/ -e u
 ### Fuzzing 
 - subdomains
 ```sh
-wfuzz -c -w subdomains -u "FUZZ[.]target" --sc 200,301,301,401 -Z
+wfuzz -c -w subdomains -u "FUZZ.target" --sc 200,301,301,401 -Z
+```
+- Hosts
+```sh
+wfuzz -c --hw 977 -u http://team.thm -H "Host: FUZZ.team.thm" -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt
 ```
 ### JohnTheRipper
 
