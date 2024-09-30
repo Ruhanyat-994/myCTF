@@ -82,15 +82,15 @@ PING team.thm (10.10.253.175) 56(84) bytes of data.
 ```
 - I have added dev.team.thm to the `/etc/hosts`
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/d5d7cdeb-bbbf-4246-a125-276de98a8701)
 
-![alt text](image-1.png)
+![image-1](https://github.com/user-attachments/assets/29754d6c-b0b8-45dd-936f-30a86ef60b58)
 
-![alt text](image-2.png)
+![image-2](https://github.com/user-attachments/assets/2c63bf46-7237-480d-bade-67cead06bf1f)
 
 - Lets analyse with burpsuite! 😎😎😎
 
-![alt text](image-3.png)
+![image-3](https://github.com/user-attachments/assets/b74fb301-e16d-4fd7-8554-ca2e941778ea)
 
 - Got the user.txt!
 
@@ -124,13 +124,13 @@ PING team.thm (10.10.253.175) 56(84) bytes of data.
 
 - This command will copy this huge list
 
-![alt text](image-4.png)
+![image-4](https://github.com/user-attachments/assets/b0d64306-53ac-4ea3-8e53-1e997d4d2d24)
 
 - And paste it here
 
-![alt text](image-5.png)
+![image-5](https://github.com/user-attachments/assets/bf1f577b-a63b-4dea-a1ff-83c3068e3062)
 
-![alt text](image-6.png)
+![image-6](https://github.com/user-attachments/assets/0d9f6c48-244d-44b6-85e1-17767c95203a)
 
 - here we found very interesting id_rsa key
 ```sh
