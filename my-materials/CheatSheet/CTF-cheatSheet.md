@@ -262,7 +262,7 @@ rlwrap nc -nlvp 4444
 ## Getting the terminal Shell
 - **Some time the terminal shell is not given then we have to do this!**
 ```sh
-python -c "import pty; pty.spawn('/bin/bash')"
+python3 -c "import pty; pty.spawn('/bin/bash')"
 export TERM=xterm
 Ctrl+Z
 stty raw -echo; fg
