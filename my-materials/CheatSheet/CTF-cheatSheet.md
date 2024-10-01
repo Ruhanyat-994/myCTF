@@ -106,6 +106,10 @@ gpg --decrypt <file name>
 
 ### Some Important commands
 
+- #### **Copying Large text**
+```sh
+cat /usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt | xclip -selection clipboard
+```
 - #### **Finding file Type**
 ```sh
 file <filename>
