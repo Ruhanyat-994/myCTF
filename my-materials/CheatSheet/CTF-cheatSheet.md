@@ -106,6 +106,10 @@ gpg --decrypt <file name>
 
 ### Some Important commands
 
+- #### **Downloading everything from a directory**
+```sh
+wget -r http://<ip>:8008/
+```
 - #### **Copying Large text**
 ```sh
 cat /usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt | xclip -selection clipboard
