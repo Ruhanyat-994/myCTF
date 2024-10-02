@@ -253,7 +253,10 @@ find / -type f -perm -04000 -ls 2>/dev/null
 ```sh
 cat /etc/crontab 
 ```
-
+- #### Finding backdoors
+```sh
+curl localhost:8080
+```
 - #### Searching for `Bash History`
 ```sh
 ls -la /etc/cron.daily/
