@@ -28,6 +28,10 @@ nmap -sC -sV -p- -T4 --min-rate=[packet size] -vv [MACHINE IP]
 ```sh
  nmap -p 80 -vv --script http-wordpress-enum --script-args type="plugins",search-limit=1500 <target-ip> >> vuln_plugin.txt
 ```
+- For Internal Ports
+```sh
+ss -tulpn
+```
 ### Directory Enumeration
 
 - #### **Gobuster**
