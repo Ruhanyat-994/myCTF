@@ -24,3 +24,7 @@ commit 7d3aa557ff7ba7d116badaf5307761efb3622249
 └─$ cat message.txt
 picoCTF{s@n1t1z3_be3dd3da}
 ```
+## Blame Game
+```sh
+git log <file>.py
+```
