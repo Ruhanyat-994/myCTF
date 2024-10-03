@@ -28,3 +28,10 @@ picoCTF{s@n1t1z3_be3dd3da}
 ```sh
 git log <file>.py
 ```
+
+## repetitions
+```sh
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ base64 -d enc_flag | base64 -d |  base64 -d | base64 -d |  base64 -d| base64 -d
+```
+- Sometime we need to repeat the sequence
