@@ -39,3 +39,7 @@ git log <file>.py
 ```sh
  grep -r big-zip-files -e pico
 ```
+## Find First
+```sh
+strings files.zip| grep pico
+```
