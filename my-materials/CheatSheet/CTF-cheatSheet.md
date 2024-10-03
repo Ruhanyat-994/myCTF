@@ -110,6 +110,10 @@ gpg --decrypt <file name>
 
 ### Some Important commands
 
+- #### **Greping flag from big directories**
+```sh
+ grep -r big-zip-files -e flag
+```
 - #### **Downloading everything from a directory**
 ```sh
 wget -r http://<ip>:8008/
