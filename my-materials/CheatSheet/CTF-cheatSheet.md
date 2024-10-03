@@ -1,4 +1,4 @@
-# Jeopardy-style CTFs
+g# Jeopardy-style CTFs
 
 ## Recon
 
@@ -110,9 +110,13 @@ gpg --decrypt <file name>
 
 ### Some Important commands
 
-- #### **Greping flag from big directories**
+- #### **Grepping flag from big directories**
 ```sh
  grep -r big-zip-files -e flag
+```
+- ### **Grepping from ZIP file**
+```sh
+strings files.zip| grep flag
 ```
 - #### **Downloading everything from a directory**
 ```sh
