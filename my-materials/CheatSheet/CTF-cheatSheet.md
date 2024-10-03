@@ -354,6 +354,7 @@ ping name
     - [Crack Station](https://crackstation.net/)
     - [md5hashing.net](https://md5hashing.net/hash/md5/a18672860d0510e5ab6699730763b250) -> **It worked good for MD-5 decode**
     - [Vigenere Cipher Decode](https://gchq.github.io/CyberChef/#recipe=Vigen%C3%A8re_Decode('KeepGoing')&input=RHZjIFdAaXl1ckAxMjM)
+    - [A1Z26](https://www.dcode.fr/letter-number-cipher) -> **Letter Number Cipher**
 - #### Vulnerability or CVE detection
     - [AttackerKB](https://attackerkb.com/)
     - [AttackerKB TOOL](https://github.com/horshark/akb-explorer)
