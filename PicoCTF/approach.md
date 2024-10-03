@@ -35,3 +35,7 @@ git log <file>.py
 └─$ base64 -d enc_flag | base64 -d |  base64 -d | base64 -d |  base64 -d| base64 -d
 ```
 - Sometime we need to repeat the sequence
+## Big Zip
+```sh
+ grep -r big-zip-files -e pico
+```
