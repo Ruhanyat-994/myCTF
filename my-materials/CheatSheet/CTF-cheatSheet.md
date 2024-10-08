@@ -194,7 +194,7 @@ mysql -u <name> -h <ip> -p --ssl=0
 show databases;
 use <db-name>;
 show tables;
-select * form <table-name>;
+select * from <table-name>;
 
 update <table-name> set run = 1 ;
 
