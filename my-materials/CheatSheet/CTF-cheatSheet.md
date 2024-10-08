@@ -183,6 +183,13 @@ curl -s http://(IP/URL)/ | grep hidden
 ```
 
 ### MySQL Commands
+
+**Login**
+```sh
+mysql -u <name> -h <ip> -p --ssl=0
+```
+- We need password for this login
+
 ```sql
 show databases;
 use <db-name>;
