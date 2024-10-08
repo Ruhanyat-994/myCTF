@@ -1,4 +1,4 @@
-g# Jeopardy-style CTFs
+# Jeopardy-style CTFs
 
 ## Recon
 
