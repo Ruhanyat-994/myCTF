@@ -107,7 +107,8 @@ gpg --import <file>
 ```sh
 gpg --decrypt <file name>
 ```
-
+### Cryptography
+- For `Transposition Cipher` [quipquip](https://www.quipqiup.com)
 ### Some Important commands
 
 - #### **Grepping flag from big directories**
