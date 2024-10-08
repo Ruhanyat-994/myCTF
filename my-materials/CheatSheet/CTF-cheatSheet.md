@@ -138,6 +138,10 @@ python3 -m http.server 80
 ```
 
 - #### **Basic Stegnography**
+**Flag From Image**
+```sh
+zsteg imag.png
+```
 ```sh
 steghide extract -sf <PictureName>
 ```
