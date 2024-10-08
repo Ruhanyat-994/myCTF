@@ -112,6 +112,10 @@ gpg --decrypt <file name>
 - [Cryptii](https://cryptii.com/)
 ### Some Important commands
 
+- #### Opening Image File
+```sh
+eog file.png
+```
 - #### **Grepping flag from big directories**
 ```sh
  grep -r big-zip-files -e flag
@@ -143,6 +147,10 @@ python3 -m http.server 80
 ```sh
 zsteg imag.png
 ```
+```sh
+foremost image.pn
+```
+- Steghide is not for `.png`
 ```sh
 steghide extract -sf <PictureName>
 ```
