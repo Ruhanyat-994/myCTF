@@ -355,6 +355,7 @@ ping name
     - [Pentest Monkey website](https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet)
     - [swisskyrepo](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/)
     - [ReverseShellGenerator](https://www.revshells.com/)
+    - [Exploit Suggestion](https://github.com/The-Z-Labs/linux-exploit-suggester)
 
 - #### HashDecoder
     - [hash killer](https://hashkiller.io/listmanager) -> **It worked good for SHA-256 decode**
