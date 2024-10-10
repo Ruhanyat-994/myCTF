@@ -92,7 +92,10 @@ sudo john --wordlist=/usr/share/wordlists/rockyou.txt root2boot
 ssh2john id_rsa > ssh.hash
 sudo john ssh.hash --wordlist=/usr/share/wordlists/rockyou.txt
 ```
-
+- Hash Decoding
+```sh
+john hash.txt --format=Raw-SHA1 --wordlist=/usr/share/wordlists/rockyou.txt
+```
 ### Base64
 ```sh
 echo -n "hashed-value" | base64 -d
