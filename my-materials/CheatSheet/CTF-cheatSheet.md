@@ -418,7 +418,9 @@ ping name
     - TOOl SearchSploit
 
 ## Brute Forcing
-
+**Crafting Wordlist**
+- [RawSec](https://inventory.raw.pm/overview.html)
+- [Cracking Category](https://inventory.raw.pm/tools.html#title-tools-cracking)
 - #### Hydra for SSH password bruteforce
 ```sh
 hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
