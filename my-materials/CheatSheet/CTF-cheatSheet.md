@@ -104,7 +104,13 @@ john hash.txt --format=Raw-SHA1 --wordlist=/usr/share/wordlists/rockyou.txt
 ```sh
 echo -n "hashed-value" | base64 -d
 ```
-
+**zip2john**
+```sh
+ zip2john file.zip > output.txt
+```
+```sh
+john --format=zip output.txt
+```
 ### gpg 
 - **Import**
 ```sh
