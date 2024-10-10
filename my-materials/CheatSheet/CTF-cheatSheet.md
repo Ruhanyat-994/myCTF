@@ -129,6 +129,11 @@ nohup hashcat -m 3200 hash.txt /usr/share/wordlists/rockyou.txt
 ```
 ### Some Important commands
 
+- #### Editing Rockyou
+```sh
+ cat /usr/share/wordlists/rockyou.txt| grep -E '^.{4}$' > 4charFromRock.txt
+```
+- It will grep the words that have four characters 
 - #### Opening Image File
 ```sh
 eog file.png
