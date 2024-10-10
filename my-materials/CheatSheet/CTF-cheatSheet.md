@@ -108,6 +108,14 @@ gpg --import <file>
 gpg --decrypt <file name>
 ```
 ### Cryptography
+
+##### Identifying Hash
+```sh
+haiti <hash>
+```
+```sh
+hash-identifier        
+```
 - For `Transposition Cipher` [quipquip](https://www.quipqiup.com)
 - [Cryptii](https://cryptii.com/)
 **Hashcat number finding**
@@ -347,13 +355,7 @@ su root
 - Copy the protectd file to another file
 - Remove the original file
 
-### Identifying Hash
-```sh
-haiti <hash>
-```
-```sh
-hash-identifier        
-```
+
 ### Downloading From another System
 ```
 wget http://ip/filename -P /tmp/
