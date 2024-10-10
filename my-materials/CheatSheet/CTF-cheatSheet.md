@@ -449,6 +449,10 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt -f -V example.com http-post-f
 ```sh
 hydra -l user -P pin_codes.txt http-post-form "/login.php:user=^USER^&pin=^PASS^:Invalid PIN" -V
 ```
+**Hydra FTP Enum**
+```sh
+hydra -t 4 -l <username> -P <Password txt file location> ftp://<target_ip>
+```
 ## Brute Forcing
 **Crafting Wordlist**
 - [RawSec](https://inventory.raw.pm/overview.html)
