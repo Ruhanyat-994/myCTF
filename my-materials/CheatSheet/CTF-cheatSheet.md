@@ -119,6 +119,10 @@ hash-identifier
 - For `Transposition Cipher` [quipquip](https://www.quipqiup.com)
 - [Cryptii](https://cryptii.com/)
 
+**Finding hash-code using John The Riper**
+```sh
+john --list=FORMATS | grep -i <code name>
+```
 **Hashcat number finding**
 ```sh
 hashcat --help | grep <number/nameofhash>
