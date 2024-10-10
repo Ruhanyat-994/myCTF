@@ -170,6 +170,10 @@ wget -r http://<ip>:8008/
 ```sh
 cat /usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt | xclip -selection clipboard
 ```
+- #### **Web Scrapping**
+```sh
+ cewl -d 2 -w hash8_scrapped.txt http://<MACHINE_IP>/rtfm.re/en/sponsors/index.html
+```
 - #### **Finding file Type**
 ```sh
 file <filename>
