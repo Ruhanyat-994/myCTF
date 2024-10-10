@@ -118,6 +118,7 @@ hash-identifier
 ```
 - For `Transposition Cipher` [quipquip](https://www.quipqiup.com)
 - [Cryptii](https://cryptii.com/)
+
 **Hashcat number finding**
 ```sh
 hashcat --help | grep <number/nameofhash>
