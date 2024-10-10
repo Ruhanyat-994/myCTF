@@ -123,6 +123,10 @@ hashcat --help | grep <number/nameofhash>
 nohup hashcat -m 3200 hash.txt /usr/share/wordlists/rockyou.txt
 ```
 - When the process takes so much time
+**More Faster Hashcat using CPU and GPU**
+```sh
+ hashcat -a 0 -D 1,2 -w 3 -m 3200 hash.txt /usr/share/wordlists/rockyou.txt
+```
 ### Some Important commands
 
 - #### Opening Image File
