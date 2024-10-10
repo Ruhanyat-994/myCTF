@@ -398,7 +398,7 @@ ping name
     - [Hash Finding](https://www.tunnelsup.com/hash-analyzer/)
     - [Hash Finding 2](https://www.onlinehashcrack.com/hash-identification.php)
     - [hash killer](https://hashkiller.io/listmanager) -> **It worked good for SHA-256 decode**
-    - [Crack Station](https://crackstation.net/)
+    - [Crack Station](https://crackstation.net/) -> good for md4
     - [md5hashing.net](https://md5hashing.net/hash/md5/a18672860d0510e5ab6699730763b250) -> **It worked good for MD-5 decode**
     - [Vigenere Cipher Decode](https://gchq.github.io/CyberChef/#recipe=Vigen%C3%A8re_Decode('KeepGoing')&input=RHZjIFdAaXl1ckAxMjM)
     - [A1Z26](https://www.dcode.fr/letter-number-cipher) -> **Letter Number Cipher**
