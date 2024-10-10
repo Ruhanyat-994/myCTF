@@ -110,6 +110,10 @@ gpg --decrypt <file name>
 ### Cryptography
 - For `Transposition Cipher` [quipquip](https://www.quipqiup.com)
 - [Cryptii](https://cryptii.com/)
+**Hashcat number finding**
+```sh
+hashcat --help | grep <number/nameofhash>
+```
 ### Some Important commands
 
 - #### Opening Image File
