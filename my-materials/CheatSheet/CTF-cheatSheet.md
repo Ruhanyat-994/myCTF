@@ -349,6 +349,9 @@ su root
 
 ### Identifying Hash
 ```sh
+haiti <hash>
+```
+```sh
 hash-identifier        
 ```
 ### Downloading From another System
