@@ -114,6 +114,10 @@ gpg --decrypt <file name>
 ```sh
 hashcat --help | grep <number/nameofhash>
 ```
+**Hashcat with rockyou**
+```sh
+ hashcat -m 3200 hash.txt /usr/share/wordlists/rockyou.txt
+```
 ### Some Important commands
 
 - #### Opening Image File
