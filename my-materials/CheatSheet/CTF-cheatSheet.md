@@ -32,6 +32,10 @@ nmap -sC -sV -p- -T4 --min-rate=[packet size] -vv [MACHINE IP]
 ```sh
 ss -tulpn
 ```
+- For Pymap
+```sh
+sudo python3 pymap.py -t <target-ip> --all >> ports.txt
+```
 ### Directory Enumeration
 
 - #### **Gobuster**
