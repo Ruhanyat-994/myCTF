@@ -118,6 +118,11 @@ hashcat --help | grep <number/nameofhash>
 ```sh
  hashcat -m 3200 hash.txt /usr/share/wordlists/rockyou.txt
 ```
+**Running Hashcat in the Background**
+```sh
+nohup hashcat -m 3200 hash.txt /usr/share/wordlists/rockyou.txt
+```
+- When the process takes so much time
 ### Some Important commands
 
 - #### Opening Image File
