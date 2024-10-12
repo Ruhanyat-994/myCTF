@@ -188,7 +188,12 @@ cat /usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt | xclip -sele
 ```sh
 file <filename>
 ```
+- #### Changing image extension
+```sh
+sudo apt install imagemagick -y
 
+convert hello.jpeg hello.jpg
+```
 - #### **Running Python Server**
 ```sh
 python3 -m http.server 80
@@ -205,6 +210,10 @@ foremost image.pn
 - Steghide is not for `.png`
 ```sh
 steghide extract -sf <PictureName>
+```
+- outguess is for jpg
+```sh
+outguess -r 8S8OaQw.jpg outputmsg
 ```
 - #### For seeing what is running on a file `we can check if there is any root process is running on a folder or not`
 ```sh
