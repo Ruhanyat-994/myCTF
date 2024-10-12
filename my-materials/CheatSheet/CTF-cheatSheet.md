@@ -409,7 +409,7 @@ ping name
 
 - #### **Payloads**
     - [PaloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
-- #### **Extension Convert for Hex code**
+- #### **Extension Convertion for Hex code(List of file signatures)**
     - [Wiki](https://en.wikipedia.org/wiki/List_of_file_signatures?source=post_page-----8a8080672083--------------------------------)
 
 - #### **Audio Decoder**
