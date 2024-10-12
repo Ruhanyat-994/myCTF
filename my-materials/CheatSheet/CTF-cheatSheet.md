@@ -407,6 +407,7 @@ ping name
     - [Morsecode](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
     - [For more accurate](https://www.sonicvisualiser.org/download.html)
     - [dcode](https://www.dcode.fr/spectral-analysis)
+    - sonic-visualiser
 - #### Stegnography
     - [steghide webapp](https://www.aperisolve.com/)
 - #### **Password Decoder**
