@@ -211,6 +211,9 @@ foremost image.pn
 ```sh
 steghide extract -sf <PictureName>
 ```
+```sh
+steghide info image.jpg
+```
 - outguess is for jpg
 ```sh
 outguess -r 8S8OaQw.jpg outputmsg
