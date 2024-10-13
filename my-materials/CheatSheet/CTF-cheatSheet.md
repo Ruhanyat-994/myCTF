@@ -32,6 +32,10 @@ nmap -sC -sV -p- -T4 --min-rate=[packet size] -vv [MACHINE IP]
 ```sh
 ss -tulpn
 ```
+- For Pymap
+```sh
+sudo python3 pymap.py -t <target-ip> --all >> ports.txt
+```
 ### Directory Enumeration
 
 - #### **Gobuster**
@@ -92,12 +96,21 @@ sudo john --wordlist=/usr/share/wordlists/rockyou.txt root2boot
 ssh2john id_rsa > ssh.hash
 sudo john ssh.hash --wordlist=/usr/share/wordlists/rockyou.txt
 ```
-
+- Hash Decoding
+```sh
+john hash.txt --format=Raw-SHA1 --wordlist=/usr/share/wordlists/rockyou.txt
+```
 ### Base64
 ```sh
 echo -n "hashed-value" | base64 -d
 ```
-
+**zip2john**
+```sh
+ zip2john file.zip > output.txt
+```
+```sh
+john --format=zip output.txt
+```
 ### gpg 
 - **Import**
 ```sh
@@ -107,9 +120,50 @@ gpg --import <file>
 ```sh
 gpg --decrypt <file name>
 ```
+### Cryptography
 
+##### Identifying Hash
+```sh
+haiti <hash>
+```
+```sh
+hash-identifier        
+```
+- For `Transposition Cipher` [quipquip](https://www.quipqiup.com)
+- [Cryptii](https://cryptii.com/)
+
+**Finding hash-code using John The Riper**
+```sh
+john --list=FORMATS | grep -i <code name>
+```
+**Hashcat number finding**
+```sh
+hashcat --help | grep <number/nameofhash>
+```
+**Hashcat with rockyou**
+```sh
+ hashcat -m 3200 hash.txt /usr/share/wordlists/rockyou.txt
+```
+**Running Hashcat in the Background**
+```sh
+nohup hashcat -m 3200 hash.txt /usr/share/wordlists/rockyou.txt
+```
+- When the process takes so much time
+**More Faster Hashcat using CPU and GPU**
+```sh
+ hashcat -a 0 -D 1,2 -w 3 -m 3200 hash.txt /usr/share/wordlists/rockyou.txt
+```
 ### Some Important commands
 
+- #### Editing Rockyou
+```sh
+ cat /usr/share/wordlists/rockyou.txt| grep -E '^.{4}$' > 4charFromRock.txt
+```
+- It will grep the words that have four characters 
+- #### Opening Image File
+```sh
+eog file.png
+```
 - #### **Grepping flag from big directories**
 ```sh
  grep -r big-zip-files -e flag
@@ -126,19 +180,43 @@ wget -r http://<ip>:8008/
 ```sh
 cat /usr/share/seclists/Fuzzing/LFI/LFI-gracefulsecurity-linux.txt | xclip -selection clipboard
 ```
+- #### **Web Scrapping**
+```sh
+ cewl -d 2 -w hash8_scrapped.txt http://<MACHINE_IP>/rtfm.re/en/sponsors/index.html
+```
 - #### **Finding file Type**
 ```sh
 file <filename>
 ```
+- #### Changing image extension
+```sh
+sudo apt install imagemagick -y
 
+convert hello.jpeg hello.jpg
+```
 - #### **Running Python Server**
 ```sh
 python3 -m http.server 80
 ```
 
 - #### **Basic Stegnography**
+**Flag From Image**
+```sh
+zsteg imag.png
+```
+```sh
+foremost image.pn
+```
+- Steghide is not for `.png`
 ```sh
 steghide extract -sf <PictureName>
+```
+```sh
+steghide info image.jpg
+```
+- outguess is for jpg
+```sh
+outguess -r 8S8OaQw.jpg outputmsg
 ```
 - #### For seeing what is running on a file `we can check if there is any root process is running on a folder or not`
 ```sh
@@ -311,10 +389,7 @@ su root
 - Copy the protectd file to another file
 - Remove the original file
 
-### Identifying Hash
-```sh
-hash-identifier        
-```
+
 ### Downloading From another System
 ```
 wget http://ip/filename -P /tmp/
@@ -337,13 +412,14 @@ ping name
 
 - #### **Payloads**
     - [PaloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
-- #### **Extension Convert for Hex code**
+- #### **Extension Convertion for Hex code(List of file signatures)**
     - [Wiki](https://en.wikipedia.org/wiki/List_of_file_signatures?source=post_page-----8a8080672083--------------------------------)
 
 - #### **Audio Decoder**
     - [Morsecode](https://morsecode.world/international/decoder/audio-decoder-adaptive.html)
     - [For more accurate](https://www.sonicvisualiser.org/download.html)
     - [dcode](https://www.dcode.fr/spectral-analysis)
+    - sonic-visualiser
 - #### Stegnography
     - [steghide webapp](https://www.aperisolve.com/)
 - #### **Password Decoder**
@@ -358,8 +434,11 @@ ping name
     - [Exploit Suggestion](https://github.com/The-Z-Labs/linux-exploit-suggester)
 
 - #### HashDecoder
+    - [Hash Example](https://hashcat.net/wiki/doku.php?id=example_hashes)
+    - [Hash Finding](https://www.tunnelsup.com/hash-analyzer/)
+    - [Hash Finding 2](https://www.onlinehashcrack.com/hash-identification.php)
     - [hash killer](https://hashkiller.io/listmanager) -> **It worked good for SHA-256 decode**
-    - [Crack Station](https://crackstation.net/)
+    - [Crack Station](https://crackstation.net/) -> good for md4
     - [md5hashing.net](https://md5hashing.net/hash/md5/a18672860d0510e5ab6699730763b250) -> **It worked good for MD-5 decode**
     - [Vigenere Cipher Decode](https://gchq.github.io/CyberChef/#recipe=Vigen%C3%A8re_Decode('KeepGoing')&input=RHZjIFdAaXl1ckAxMjM)
     - [A1Z26](https://www.dcode.fr/letter-number-cipher) -> **Letter Number Cipher**
@@ -368,8 +447,40 @@ ping name
     - [AttackerKB TOOL](https://github.com/horshark/akb-explorer)
     - TOOl SearchSploit
 
+## Hydra
+**Username & Password Enum from httpBruteForce**
+```sh
+hydra -l admin -P /usr/share/wordlists/rockyou.txt <target-ip> http-post-form "/admin/:user=^USER^&pass=^PASS^&Login:Username or password invalid"
+```
+**Basic Http Authentication**
+```sh
+hydra -L users.txt -P passwords.txt http-get://example.com/
+```
+**Post Request for Login Forms**
+```sh
+hydra -L users.txt -P passwords.txt http-post-form "/login.php:user=^USER^&password=^PASS^:Invalid Login" -V
+```
+**Web Login BruteForce**
+```sh
+hydra -l admin -P /usr/share/wordlists/rockyou.txt -f -V example.com http-post-form "/login.php:user=^USER^&password=^PASS^:Invalid Login"
+```
+**Web Page Pin Codes BruteForcing**
+```sh
+hydra -l user -P pin_codes.txt http-post-form "/login.php:user=^USER^&pin=^PASS^:Invalid PIN" -V
+```
+**Hydra FTP Enum**
+```sh
+hydra -t 4 -l <username> -P <Password txt file location> ftp://<target_ip>
+```
 ## Brute Forcing
+**Crafting Wordlist**
+- [RawSec](https://inventory.raw.pm/overview.html)
+- [Cracking Category](https://inventory.raw.pm/tools.html#title-tools-cracking)
 
+**Finding Wordlist**
+```sh
+wordlistctl search rockyou
+```
 - #### Hydra for SSH password bruteforce
 ```sh
 hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
