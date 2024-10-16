@@ -455,6 +455,7 @@ ping name
 ```regex
  [Nn]etwork.?[Cc]ards?
 ```
+- If the question is talking about hacking tools then search windows defender
 ## Hydra
 **Username & Password Enum from httpBruteForce**
 ```sh
