@@ -446,7 +446,15 @@ ping name
     - [AttackerKB](https://attackerkb.com/)
     - [AttackerKB TOOL](https://github.com/horshark/akb-explorer)
     - TOOl SearchSploit
-
+## Forensics
+- Searching Ip addresses in autopsy for windows machine
+```path
+/Windows/system32/drivers/etc/hosts
+```
+- Searching through regex
+```regex
+ [Nn]etwork.?[Cc]ards?
+```
 ## Hydra
 **Username & Password Enum from httpBruteForce**
 ```sh
