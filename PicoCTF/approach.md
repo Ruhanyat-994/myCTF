@@ -57,3 +57,8 @@ strings files.zip| grep pico
 
 **Scanvenger Hunt**
 - Always try to find the directorys which has `.js`,`.css` extensions and `/robots.txt`,`/.htaccess`,`/.DS_Store`
+
+**dont-use-client-side** 
+- When you find parallelly same things are giving you different requests then try to check the response by `Changing the Header`
+
+
