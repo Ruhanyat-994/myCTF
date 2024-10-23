@@ -55,4 +55,5 @@ strings files.zip| grep pico
 **Local Authority**
 - Always check the get request and find if there any directory is in the response or not
 
-
+**Scanvenger Hunt**
+- Always try to find the directorys which has `.js`,`.css` extensions and `/robots.txt`,`/.htaccess`,`/.DS_Store`
