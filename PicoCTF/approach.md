@@ -52,6 +52,7 @@ strings files.zip| grep pico
 ![firefox-1](https://github.com/user-attachments/assets/f8b04772-781d-4eb2-a040-0245a8068ff8)
 
 
-
+**Local Authority**
+- Always check the get request and find if there any directory is in the response or not
 
 
