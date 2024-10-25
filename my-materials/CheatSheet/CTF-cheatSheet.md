@@ -198,7 +198,12 @@ convert hello.jpeg hello.jpg
 ```sh
 python3 -m http.server 80
 ```
-- #### **Setting Files to specific date and time: Using `exiftool`**
+- #### Exiftool
+**Verbose**
+```sh
+exiftool -v3 original.jpg
+```
+**Setting Files to specific date and time: Using `exiftool`**
 ```sh
 exiftool -Alldates='1970:01:01 00:00:00.001+00:00' -CreateDate='1970:01:01 00:00:00.001+00:00' -ModifyDate='1970:01:01 00:00:00.001' -SubSecCreateDate='1970:01:01 00:00:00.001' -SubSecDateTimeOriginal='1970:01:01 00:00:00.001' -SubSecModifyDate='1970:01:01 00:00:00.001' <file_name>
 ```
