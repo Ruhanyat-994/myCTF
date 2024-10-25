@@ -1,4 +1,20 @@
 # PicoCtf
+
+## Forensics
+### Blast from the past
+- Try to see the metadata from exiftool
+- For changing timestamp use exiftool
+```sh
+exiftool -Alldates='1970:01:01 00:00:00.001+00:00' -CreateDate='1970:01:01 00:00:00.001+00:00' -ModifyDate='1970:01:01 00:00:00.001' -SubSecCreateDate='1970:01:01 00:00:00.001' -SubSecDateTimeOriginal='1970:01:01 00:00:00.001' -SubSecModifyDate='1970:01:01 00:00:00.001' original.jpg
+```
+- still samsung time zone is not set.
+- We have to set it through hex code
+- I use `ghex` for that
+- I changed all the last hex to 0 and at the end I changed 30 to 31 because there is a 001 milisecond timestamp
+- then upload the file and boom!
+
+
+
 ## Cryptography
 ### endianness
 - **The term endianness describes the order in which computer memory stores a sequence of bytes**
