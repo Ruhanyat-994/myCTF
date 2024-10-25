@@ -13,6 +13,15 @@ exiftool -Alldates='1970:01:01 00:00:00.001+00:00' -CreateDate='1970:01:01 00:00
 - I changed all the last hex to 0 and at the end I changed 30 to 31 because there is a 001 milisecond timestamp
 - then upload the file and boom!
 
+### Mob Psycho
+- Don't get feared by `.apk` files !
+- Some time its nothing to do with apks
+- try to find if there is are `.txt` file or not
+```sh
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ find * -name "*.txt"
+res/color/flag.tx
+``` 
 
 
 ## Cryptography
