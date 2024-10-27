@@ -21,8 +21,32 @@ exiftool -Alldates='1970:01:01 00:00:00.001+00:00' -CreateDate='1970:01:01 00:00
 ┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
 └─$ find * -name "*.txt"
 res/color/flag.tx
-``` 
-
+```
+### endianness-v2
+- check the file!
+```sh
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ exiftool challengefile
+ExifTool Version Number         : 12.76
+File Name                       : challengefile
+Directory                       : .
+File Size                       : 3.4 kB
+File Modification Date/Time     : 2024:03:12 06:36:50+06:00
+File Access Date/Time           : 2024:10:27 16:18:46+06:00
+File Inode Change Date/Time     : 2024:10:27 16:18:36+06:00
+File Permissions                : -rw-r--r--
+Warning                         : Processing JPEG-like data after unknown 1-byte header
+```
+- This is a jpeg file it seems to be
+- `ghex challengefile` this command give us the hex which is `\E0\FF\D8\FF`
+-  But if we see the actual hex of jpeg which is `ff d8 ff e0`
+-  So it has been reversed!
+-  We will reverse it as well
+```sh
+hexdump -v -e '1/4 "%08x"' -e '"\n"' challange | xxd -r -p > output_file
+```
+- The flag is `picoCTF(cert!f1Ed_iNd!4n_s0rrY_3nDian_6d3ad08e}`
+- We went on this approach becasue it said about `endianness`
 
 ## Cryptography
 ### endianness
