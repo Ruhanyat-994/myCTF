@@ -48,6 +48,12 @@ hexdump -v -e '1/4 "%08x"' -e '"\n"' challange | xxd -r -p > output_file
 - The flag is `picoCTF(cert!f1Ed_iNd!4n_s0rrY_3nDian_6d3ad08e}`
 - We went on this approach becasue it said about `endianness`
 
+### MSB
+- The description and name of challenge suggests data may be hidden in the Most Significant Bit (MSB) of the RGB pixels values within the image.
+- I will use a script which will do that for me
+- [sigBits](https://github.com/Ruhanyat-994/myCTF/tree/master/my-materials/Scripts/sigBits)
+
+
 ## Cryptography
 ### endianness
 - **The term endianness describes the order in which computer memory stores a sequence of bytes**
