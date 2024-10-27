@@ -193,6 +193,10 @@ eog file.png
 ```sh
  grep -r big-zip-files -e flag
 ```
+- #### **Grepping From To**
+```sh
+cat outputSB.txt | grep -o -E "picoCTF.{0,50}"
+```
 - ### **Grepping from ZIP file**
 ```sh
 strings files.zip| grep flag
