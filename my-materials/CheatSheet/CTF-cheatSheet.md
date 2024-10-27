@@ -155,6 +155,11 @@ nohup hashcat -m 3200 hash.txt /usr/share/wordlists/rockyou.txt
 ```
 ### Some Important commands
 
+
+- #### hex reverse
+```sh
+hexdump -v -e '1/4 "%08x"' -e '"\n"' input_file | xxd -r -p > output_file
+```
 - #### Editing Rockyou
 ```sh
  cat /usr/share/wordlists/rockyou.txt| grep -E '^.{4}$' > 4charFromRock.txt
