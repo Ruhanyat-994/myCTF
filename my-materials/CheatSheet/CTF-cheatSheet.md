@@ -70,6 +70,17 @@ wpscan --url http://<ip>/wordpress/ -e u
  wpscan --url http://<ip>/wordpress/ -e ap
 ```
 ### Fuzzing 
+
+## ffuf
+```sh
+ffuf -u http://ffuf.me/cd/basic/FUZZ -w common.txt
+ffuf -w common.txt -e .log -u http://ffuf.me/cd/ext/logs/FUZZ
+ffuf -u http://ffuf.me/cd/recursion/FUZZ -w common.txt -recursion
+ffuf -w common.txt -u http://ffuf.me/cd/no404/FUZZ -mc 204,301,302,307,401,403,405,500,200 -fs 669 // this has been filtered by file size and status code
+ffuf -w common.txt -u http://ffuf.me/cd/no404/FUZZ -mc 204,301,302,307,401,403,405,500,200 -ac // this will filterout all its own
+
+ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://FUZZ.ffuf.me -H "Host: FUZZ.ffuf.me" // this will fuzz the vhost as well
+```
 - subdomains
 ```sh
 wfuzz -c -w subdomains -u "FUZZ.target" --sc 200,301,301,401 -Z
