@@ -75,3 +75,13 @@ ffuf -u http://mydomain.com -c -w /usr/share/seclists/Discovery/DNS/subdomains-t
 ```sh
 ffuf -u http://hackeme.com/FUZZ -c -w /usr/share/seclists/Discovery/Web-Content/common.txt -x http://127.0.0.1:8080
 ```
+
+
+# Common Commands
+```sh
+ffuf -u http://ffuf.me/cd/basic/FUZZ -w common.txt
+ffuf -w common.txt -e .log -u http://ffuf.me/cd/ext/logs/FUZZ
+ffuf -u http://ffuf.me/cd/recursion/FUZZ -w common.txt -recursion
+ffuf -w common.txt -u http://ffuf.me/cd/no404/FUZZ -mc 204,301,302,307,401,403,405,500,200 -fs 669 // this has been filtered by file size and status code
+ffuf -w common.txt -u http://ffuf.me/cd/no404/FUZZ -mc 204,301,302,307,401,403,405,500,200 -ac // this will filterout all its own
+```
