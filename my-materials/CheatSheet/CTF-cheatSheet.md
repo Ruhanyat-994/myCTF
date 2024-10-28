@@ -79,7 +79,7 @@ ffuf -u http://ffuf.me/cd/recursion/FUZZ -w common.txt -recursion
 ffuf -w common.txt -u http://ffuf.me/cd/no404/FUZZ -mc 204,301,302,307,401,403,405,500,200 -fs 669 // this has been filtered by file size and status code
 ffuf -w common.txt -u http://ffuf.me/cd/no404/FUZZ -mc 204,301,302,307,401,403,405,500,200 -ac // this will filterout all its own
 
-ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://FUZZ.ffuf.me -H "Host: FUZZ.ffuf.me" // this will fuzz the vhost as well
+ffuf -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://FUZZ.ffuf.me -H "Host: FUZZ.ffuf.me" //Fuzzing vhost
 ```
 - subdomains
 ```sh
