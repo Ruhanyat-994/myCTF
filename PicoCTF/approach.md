@@ -53,7 +53,62 @@ hexdump -v -e '1/4 "%08x"' -e '"\n"' challange | xxd -r -p > output_file
 - I will use a script which will do that for me
 - [sigBits](https://github.com/Ruhanyat-994/myCTF/tree/master/my-materials/Scripts/sigBits)
 
+### Sleuthkit Apprentice
+```sh
+┌──(bc-here㉿BC-Here)-[/tmp]
+└─$ mmls disk.flag.img
+DOS Partition Table
+Offset Sector: 0
+Units are in 512-byte sectors
 
+      Slot      Start        End          Length       Description
+000:  Meta      0000000000   0000000000   0000000001   Primary Table (#0)
+001:  -------   0000000000   0000002047   0000002048   Unallocated
+002:  000:000   0000002048   0000206847   0000204800   Linux (0x83)
+003:  000:001   0000206848   0000360447   0000153600   Linux Swap / Solaris x86 (0x82)
+004:  000:002   0000360448   0000614399   0000253952   Linux (0x83)
+
+┌──(bc-here㉿BC-Here)-[/tmp]
+└─$ fls -o 0000360448 disk.flag.img
+d/d 451:        home
+d/d 11: lost+found
+d/d 12: boot
+d/d 1985:       etc
+d/d 1986:       proc
+d/d 1987:       dev
+d/d 1988:       tmp
+d/d 1989:       lib
+d/d 1990:       var
+d/d 3969:       usr
+d/d 3970:       bin
+d/d 1991:       sbin
+d/d 1992:       media
+d/d 1993:       mnt
+d/d 1994:       opt
+d/d 1995:       root
+d/d 1996:       run
+d/d 1997:       srv
+d/d 1998:       sys
+d/d 2358:       swap
+V/V 31745:      $OrphanFiles
+
+┌──(bc-here㉿BC-Here)-[/tmp]
+└─$ fls -o 0000360448 disk.flag.img 11
+
+┌──(bc-here㉿BC-Here)-[/tmp]
+└─$ fls -o 0000360448 disk.flag.img 1995
+r/r 2363:       .ash_history
+d/d 3981:       my_folder
+
+┌──(bc-here㉿BC-Here)-[/tmp]
+└─$ fls -o 0000360448 disk.flag.img 3981
+r/r * 2082(realloc):    flag.txt
+r/r 2371:       flag.uni.txt
+
+┌──(bc-here㉿BC-Here)-[/tmp]
+└─$ icat -o 0000360448 disk.flag.img 2371
+picoCTF{by73_5urf3r_3497ae6b}
+```
 ## Cryptography
 ### endianness
 - **The term endianness describes the order in which computer memory stores a sequence of bytes**
