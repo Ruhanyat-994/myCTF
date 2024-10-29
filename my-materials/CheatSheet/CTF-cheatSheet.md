@@ -197,6 +197,10 @@ strings files.zip| grep flag
 ```sh
 pdftotext file.pdf
 ```
+- #### Image to text
+```sh
+tesseract image.png output.txt
+```
 - #### **Downloading everything from a directory**
 ```sh
 wget -r http://<ip>:8008/
