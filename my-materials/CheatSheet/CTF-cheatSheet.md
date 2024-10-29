@@ -195,7 +195,7 @@ strings files.zip| grep flag
 ```
 - #### pdf to text
 ```sh
-pdf2text file.pdf
+pdftotext file.pdf
 ```
 - #### **Downloading everything from a directory**
 ```sh
