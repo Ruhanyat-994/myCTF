@@ -131,26 +131,7 @@ gpg --import <file>
 ```sh
 gpg --decrypt <file name>
 ```
-## Forensics
 
-### Important commands
-**For partitions**
-```sh
-mmls diskimage
-```
-**for getting into partition**
-```sh
-fls -o 0001140736  diskimage
-```
-**for getting into files with number**
-```sh
-fls -o 0001140736 diskImage 204
-```
-
-**For finding files with extension**
-```sh
-icat -o 0001140736  diskImage 8 |xxd |grep ".txt" -A3
-```
 ## Cryptography
 
 ##### Identifying Hash
@@ -510,6 +491,25 @@ ping name
  [Nn]etwork.?[Cc]ards?
 ```
 - If the question is talking about hacking tools then search windows defender
+
+### Important commands
+**For partitions**
+```sh
+mmls diskimage
+```
+**for getting into partition**
+```sh
+fls -o 0001140736  diskimage
+```
+**for getting into files with number**
+```sh
+fls -o 0001140736 diskImage 204
+```
+
+**For finding files with extension**
+```sh
+icat -o 0001140736  diskImage 8 |xxd |grep ".txt" -A3
+```
 ## Hydra
 **Username & Password Enum from httpBruteForce**
 ```sh
