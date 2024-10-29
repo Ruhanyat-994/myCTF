@@ -193,6 +193,10 @@ cat outputSB.txt | grep -o -E "picoCTF.{0,50}"
 ```sh
 strings files.zip| grep flag
 ```
+- #### pdf to text
+```sh
+pdf2text file.pdf
+```
 - #### **Downloading everything from a directory**
 ```sh
 wget -r http://<ip>:8008/
