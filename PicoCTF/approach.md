@@ -139,6 +139,31 @@ picoCTF{C4n_Y0u_S33_m3_fully}
 Redacted document.
 
 ```
+
+### Operation Orchid
+```sh
+
+┌──(bc-here㉿BC-Here)-[/tmp]
+└─$ icat -o 0000411648 disk.flag.img 1782
+Salted__0��!�-6V����0�U��l��&�:�pj_1�0�|�h
+                                          �Ȥ7� ���؎$�'%
+
+┌──(bc-here㉿BC-Here)-[/tmp]
+└─$ icat -o 0000411648 disk.flag.img 1782 > flag.txt.enc
+
+
+┌──(bc-here㉿BC-Here)-[/tmp]
+└─$ openssl aes256 -d -salt -in flag.txt.enc -out flag.txt -k unbreakablepassword1234567
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+bad decrypt
+80A67144627F0000:error:1C800064:Provider routines:ossl_cipher_unpadblock:bad decrypt:../providers/implementations/ciphers/ciphercommon_block.c:107:
+
+┌──(bc-here㉿BC-Here)-[/tmp]
+└─$ cat flag.txt
+picoCTF{h4un71ng_p457_0a710765}
+
+```
 ## Cryptography
 ### endianness
 - **The term endianness describes the order in which computer memory stores a sequence of bytes**
