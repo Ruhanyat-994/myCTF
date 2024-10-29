@@ -109,6 +109,36 @@ r/r 2371:       flag.uni.txt
 └─$ icat -o 0000360448 disk.flag.img 2371
 picoCTF{by73_5urf3r_3497ae6b}
 ```
+
+### Redaction gone wrong
+- If anything given to you which says secured of redacted data on a pdf try to check the basic security flaw
+- Here A pdf was given and There are some data which has been redacted through black ink
+- I just tried to copy that with ctrl+A and ctrl+C
+- Paste is to another file and Majic! there wasn't the redaction there
+
+#### OR
+```sh
+
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ pdftotext Financial_Report_for_ABC_Labs.pdf
+
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ ls
+Financial_Report_for_ABC_Labs.pdf  Financial_Report_for_ABC_Labs.txt
+
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ cat Financial_Report_for_ABC_Labs.txt
+Financial Report for ABC Labs, Kigali, Rwanda for the year 2021.
+Breakdown - Just painted over in MS word.
+
+Cost Benefit Analysis
+Credit Debit
+This is not the flag, keep looking
+Expenses from the
+picoCTF{C4n_Y0u_S33_m3_fully}
+Redacted document.
+
+```
 ## Cryptography
 ### endianness
 - **The term endianness describes the order in which computer memory stores a sequence of bytes**
