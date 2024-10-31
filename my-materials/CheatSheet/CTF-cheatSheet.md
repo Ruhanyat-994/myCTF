@@ -513,7 +513,7 @@ mmls diskimage
 ```
 **for getting into partition**
 ```sh
-fls -o 0001140736  diskimage
+fls -o 0001140736<this is start number>  diskimage
 ```
 **for getting into files with number**
 ```sh
