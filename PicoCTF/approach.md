@@ -164,6 +164,11 @@ bad decrypt
 picoCTF{h4un71ng_p457_0a710765}
 
 ```
+
+### File Type
+[Look Here](https://github.com/Ruhanyat-994/myCTF/blob/master/PicoCTF/File_Type(forensics_pico).md)
+
+
 ## Cryptography
 ### endianness
 - **The term endianness describes the order in which computer memory stores a sequence of bytes**
