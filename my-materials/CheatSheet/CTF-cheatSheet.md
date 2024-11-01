@@ -496,6 +496,8 @@ ping name
     - [AttackerKB TOOL](https://github.com/horshark/akb-explorer)
     - TOOl SearchSploit
 ## Forensics
+- File Type (pico)
+[Look Here](https://github.com/Ruhanyat-994/myCTF/blob/master/PicoCTF/File_Type(forensics_pico).md)
 - Searching Ip addresses in autopsy for windows machine
 ```path
 /Windows/system32/drivers/etc/hosts
