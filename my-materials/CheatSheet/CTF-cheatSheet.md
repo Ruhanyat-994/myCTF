@@ -267,6 +267,10 @@ steghide info image.jpg
 ```sh
 outguess -r 8S8OaQw.jpg outputmsg
 ```
+- Aperis Solve Tool
+```sh
+aperisolve file_name
+```
 - #### For seeing what is running on a file `we can check if there is any root process is running on a folder or not`
 ```sh
 ps aux
