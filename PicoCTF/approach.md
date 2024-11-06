@@ -168,6 +168,18 @@ picoCTF{h4un71ng_p457_0a710765}
 ### File Type
 [Look Here](https://github.com/Ruhanyat-994/myCTF/blob/master/PicoCTF/File_Type(forensics_pico).md)
 
+### Evesdrop
+- You need to save the file from wireshark 
+```sh
+┌──(bc-here㉿BC-Here)-[~]
+└─$ openssl des3 -d -salt -in file.des3 -out file.txt -k supersecretpassword123
+*** WARNING : deprecated key derivation used.
+Using -iter or -pbkdf2 would be better.
+
+┌──(bc-here㉿BC-Here)-[~]
+└─$ cat file.txt
+picoCTF{nc_73115_411_5786acc3}
+```
 
 ## Cryptography
 ### endianness
