@@ -89,6 +89,16 @@ wfuzz -c -w subdomains -u "FUZZ.target" --sc 200,301,301,401 -Z
 ```sh
 wfuzz -c --hw 977 -u http://team.thm -H "Host: FUZZ.team.thm" -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt
 ```
+
+
+### aircrack-ng
+- WPA password bruteforcing using  `.pcap` file
+```sh
+aircrack-ng -w /usr/share/wordlists/rockyou.txt capture.pcap
+```
+
+
+
 ### JohnTheRipper
 
 - **Chaning a human un-redable format to human readable format**
