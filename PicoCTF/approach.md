@@ -180,7 +180,19 @@ Using -iter or -pbkdf2 would be better.
 └─$ cat file.txt
 picoCTF{nc_73115_411_5786acc3}
 ```
+### WPA-ing Out
+```sh
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ aircrack-ng -w /usr/share/wordlists/rockyou.txt wpa-ing_out.pcap
 
+                               Aircrack-ng 1.7
+
+      Time left: 29 minutes, 19 seconds                          0.02%
+
+                          KEY FOUND! [ mickeymouse ]
+
+
+```
 ## Cryptography
 ### endianness
 - **The term endianness describes the order in which computer memory stores a sequence of bytes**
