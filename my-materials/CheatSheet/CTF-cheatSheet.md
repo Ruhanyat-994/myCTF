@@ -36,6 +36,10 @@ ss -tulpn
 ```sh
 sudo python3 pymap.py -t <target-ip> --all >> ports.txt
 ```
+
+<br><br>
+<br><br>
+
 ### Directory Enumeration
 
 - #### **Gobuster**
