@@ -309,6 +309,11 @@ find /directory/path/files -type f -perm /+x
 ```sh
 find / -type f -name user.txt 2> /dev/null
 ```
+- #### [Stegsolve](https://github.com/zardus/ctf-tools/blob/master/stegsolve/install)
+```sh
+java -jar /opt/stegsolve.jar
+```
+
 
 ### FTP Commands
 - #### Downloding from  `ftp` to `local`
