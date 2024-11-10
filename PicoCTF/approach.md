@@ -193,6 +193,21 @@ picoCTF{nc_73115_411_5786acc3}
 
 
 ```
+### advanced-potion-making
+```sh
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ ghex advanced-potion-making
+```
+- After checking the hex data it looks like it has some sort of data which a `.png` file has
+- So I changed the hex to png format `89 50 4E 47 0D 0A 1A 0A 00 00 00 0D`
+- After that I found a completely red picture so I decided to use `zsteg photo.png` for that but it gave me nothing
+- There is another tool I found on a github page [stegsolve](https://github.com/zardus/ctf-tools/blob/master/stegsolve/install)
+
+```sh
+┌──(bc-here㉿BC-Here)-[~/TOOLS]
+└─$ java -jar /opt/stegsolve.jar
+```
+- Nice I got the flag which is `picoCTF{w1z4rdry}`
 ## Cryptography
 ### endianness
 - **The term endianness describes the order in which computer memory stores a sequence of bytes**
