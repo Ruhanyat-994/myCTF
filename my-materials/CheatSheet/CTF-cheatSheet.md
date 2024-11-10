@@ -531,6 +531,16 @@ ping name
 ```
 - If the question is talking about hacking tools then search windows defender
 
+### Memory Forensics
+#### **Volatility**
+- **Image or Memory information**
+```sh
+vol -f file.vmem imageinfo
+```
+- **Hash dump or Passwords**
+```sh
+vol -f file.vmem windows.hashdump
+```
 ### Important commands
 **For partitions**
 ```sh
