@@ -208,6 +208,8 @@ picoCTF{nc_73115_411_5786acc3}
 └─$ java -jar /opt/stegsolve.jar
 ```
 - Nice I got the flag which is `picoCTF{w1z4rdry}`
+### Matryoshka doll
+- Sometime when you won't get anything from a picture do `unzip file.ext`
 ## Cryptography
 ### endianness
 - **The term endianness describes the order in which computer memory stores a sequence of bytes**
