@@ -554,6 +554,10 @@ fls -o 0001140736<this is start number>  diskimage
 ```sh
 fls -o 0001140736 diskImage 204
 ```
+**Finding Files**
+```sh
+fls -r -p -o <start number> <Image Name> | grep <file name>
+```
 
 **For finding files with extension**
 ```sh
