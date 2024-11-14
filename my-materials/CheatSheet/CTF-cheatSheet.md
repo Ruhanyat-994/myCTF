@@ -525,9 +525,10 @@ ping name
 42 4d 8e 26 2c 00 00 00 00 00 ba d0 00 00 28 00
 00 00 6e 04 00 00 40 03
 ```
-- File Type (pico)
-[Look Here](https://github.com/Ruhanyat-994/myCTF/blob/master/PicoCTF/File_Type(forensics_pico).md)
-- Searching Ip addresses in autopsy for windows machine
+**File Type (pico)**
+[Look Here](https://github.com/Ruhanyat-994/myCTF/blob/master/PicoCTF/File_Type(forensics_pico).md)  
+
+**Searching Ip addresses in autopsy for windows machine**
 ```path
 /Windows/system32/drivers/etc/hosts
 ```
