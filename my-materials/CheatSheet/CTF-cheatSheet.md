@@ -542,6 +542,10 @@ vol -f file.vmem imageinfo
 vol -f file.vmem windows.hashdump
 ```
 ### Important commands
+**Search Strings from Disk Image**
+```sh
+srch_strings -a disk.img | grep string
+```
 **For partitions**
 ```sh
 mmls diskimage
