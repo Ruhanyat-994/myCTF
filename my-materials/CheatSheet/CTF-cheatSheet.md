@@ -575,6 +575,17 @@ fls -r -p -o <start number> <Image Name> | grep <file name>
 ```sh
 icat -o 0001140736  diskImage 8 |xxd |grep ".txt" -A3
 ```
+### Network Forensics
+**Wireshark**
+- Finding particular Function
+```sh
+tshark -nr file.pcap -Y 'dns'
+```
+- adding commands
+```sh
+tshark -nr file.pcap -Y 'dns' | grep -v '8.8.8.8' | grep -v response | grep -v local | awk -e '{print $11}' | sed -e 's/\..*//' | base64
+-d
+```
 ## Hydra
 **Username & Password Enum from httpBruteForce**
 ```sh
