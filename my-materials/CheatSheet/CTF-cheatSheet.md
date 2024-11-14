@@ -525,6 +525,7 @@ ping name
 42 4d 8e 26 2c 00 00 00 00 00 ba d0 00 00 28 00
 00 00 6e 04 00 00 40 03
 ```
+[Blog on Hex problem approach](https://gddaredevil.medium.com/tunn3l-v1s10n-picoctf-2021-22af85aab8dc)
 **File Type (pico)**
 [Look Here](https://github.com/Ruhanyat-994/myCTF/blob/master/PicoCTF/File_Type(forensics_pico).md)  
 
