@@ -259,6 +259,18 @@ git log <file>.py
 ```sh
 strings files.zip| grep pico
 ```
+### Wireshark twoo twooo two twoo...
+- I have checked the pcap file in wireshark And found too many dns query in two servers `8.8.8.8` and another one
+**Commands**
+```sh
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ tshark -nr shark2.pcapng -Y 'dns'
+
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ tshark -nr shark2.pcapng -Y 'dns' | grep -v '8.8.8.8' | grep -v response | grep -v local | awk -e '{print $13}' | sed -e 's/\..*//' | base64
+-d
+picoCTpicoCTF{dns_F{dns_3xf1l_3xf1l_ftw_deftw_deadbeefadbeef}}}}
+```
 
 
 ## Web Exploitation
