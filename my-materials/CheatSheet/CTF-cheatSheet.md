@@ -370,7 +370,14 @@ Progress: [                              ]   0Progress: [=======================
     - [Dav](https://github.com/Ruhanyat-994/myCTF/blob/master/THM-CTF/Dav/WriteUp.md)
 
 ### POP3 Commands
-
+**pop3 Login**
+```sh
+telnet <ip> <port>
+user <username>
++OK
+pass <password>
++OK
+```
 #### Login BruteForce using `Metasploit`
 - Password and Username list needed
 ```sh
@@ -390,6 +397,10 @@ list
 - To see the files
 ```sh
 retr <list number>
+```
+- To get out of the pop3 terminal
+```sh
+QUIT
 ```
 
 ## Scripts
