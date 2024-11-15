@@ -378,6 +378,9 @@ user <username>
 pass <password>
 +OK
 ```
+```sh
+nc <ip> <port>
+```
 #### Login BruteForce using `Metasploit`
 - Password and Username list needed
 ```sh
