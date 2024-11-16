@@ -289,6 +289,41 @@ flag.txt  instructions.txt  picture1.bmp  picture2.bmp  picture3.bmp  plan  prog
 └─$ cat flag.txt
 picoCTF{h1dd3n_1n_pLa1n_51GHT_18375919}
 ```
+### 17. Pitter, Patter, Platters
+```sh
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ fls suspicious.dd.sda1
+d/d 11: lost+found
+d/d 2009:       boot
+d/d 4017:       tce
+r/r 12: suspicious-file.txt
+V/V 8033:       $OrphanFiles
+
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ icat suspicious.dd.sda1 12
+Nothing to see here! But you may want to look here -->
+
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ strings -e b suspicious.dd.sda1
+61d907ec_3<_|Lm_111t5_3b{FTCocip
+qQWTYUiIOPb
+FGjJKLs
+ZXvc
+#+3;CScs
+!1Aa
+qQWTYUiIOPb
+FGjJKLs
+ZXvc
+#+3;CScs
+!1Aa
+#+3;CScs
+!1Aa
+7777777777
+
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ strings -e b suspicious.dd.sda1 | rev
+picoCTF{b3_5t111_mL|_<3_ce709d16
+```
 
 ## Cryptography
 ### 17. endianness
