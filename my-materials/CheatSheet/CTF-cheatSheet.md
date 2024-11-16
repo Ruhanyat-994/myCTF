@@ -591,6 +591,10 @@ icat -o 0001140736  diskImage 8 |xxd |grep ".txt" -A3
 ```
 ### Network Forensics
 **Wireshark**
+- Filtering by packet number or frame number
+```sh
+frame.number == <number>
+```
 - Finding particular Function
 ```sh
 tshark -nr file.pcap -Y 'dns'
