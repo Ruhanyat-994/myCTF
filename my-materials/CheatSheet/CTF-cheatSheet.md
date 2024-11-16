@@ -563,7 +563,7 @@ vol -f file.vmem imageinfo
 ```sh
 vol -f file.vmem windows.hashdump
 ```
-### Important commands
+### Disk Forensics
 **Search Strings from Disk Image**
 ```sh
 srch_strings -a disk.img | grep string
@@ -588,6 +588,14 @@ fls -r -p -o <start number> <Image Name> | grep <file name>
 **For finding files with extension**
 ```sh
 icat -o 0001140736  diskImage 8 |xxd |grep ".txt" -A3
+```
+**For searching strings form disk**
+```sh
+strings -e b file 
+```
+- Making is reverse
+```sh
+strings -e b file | rev
 ```
 ### Network Forensics
 **Wireshark**
