@@ -272,6 +272,67 @@ strings files.zip| grep pico
 picoCTpicoCTF{dns_F{dns_3xf1l_3xf1l_ftw_deftw_deadbeefadbeef}}}}
 ```
 
+### Trivial Flag Transfer Protocol
+- Here we will know about the TFTP protocol which is a kind of file transfer protocol
+- At first open the pcap file and go to `file>Export objects>TFTP`
+- Then you will find some files , download them all
+- open the first file which is `instructions.txt` it gives us a hash to decode
+**Encoded**
+```sh
+GSGCQBRFAGRAPELCGBHEGENSSVPFBJRZHFGQVFTHVFRBHESYNTGENAFSRE.SVTHERBHGNJNLGBUVQRGURSYNTNAQVJVYYPURPXONPXSBEGURCYNA
+```
+- I tried to cyber chef and it was ROT13
+**Decoded**
+```sh
+TFTPDOESNTENCRYPTOURTRAFFICSOWEMUSTDISGUISEOURFLAGTRANSFER.FIGUREOUTAWAYTOHIDETHEFLAGANDIWILLCHECKBACKFORTHEPLAN
+```
+**More specific**
+```sh
+TFTP DOESN’T ENCRYPT OUR TRAFFIC, SO WE MUST DISGUISE OUR FLAG TRANSFER. FIGURE OUT A WAY TO HIDE THE FLAG, AND I WILL CHECK BACK FOR THE PLAN.
+```
+- `PLAN` this is my thing to get into
+```sh
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ cat plan
+VHFRQGURCEBTENZNAQUVQVGJVGU-QHRQVYVTRAPR.PURPXBHGGURCUBGBF
+```
+- It is also a ROT13
+**Decoded**
+```sh
+IUSEDTHEPROGRAMANDHIDITWITH-DUEDILIGENCE.CHECKOUTTHEPHOTOS
+```
+- `DUEDILIGENCE` is highlighted here and its also saying to run the `program.deb`, lets do it
+```sh
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ sudo apt-get install ./program.deb
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'steghide' instead of './program.deb'
+.
+.
+.
+.
+.
+
+```
+- There is a hint here which is `Note, selecting 'steghide' instead of './program.deb'`
+- Lets use steghide with `DUEDILIGENCE` as a passphrase
+- It didn't work for pic1 and 2 but worked perfectly for pic3
+```sh
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ steghide extract -sf ./picture3.bmp -p "DUEDILIGENCE"
+the file "flag.txt" does already exist. overwrite ? (y/n) y
+wrote extracted data to "flag.txt".
+
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ ls
+flag.txt  instructions.txt  picture1.bmp  picture2.bmp  picture3.bmp  plan  program.deb  tftp.pcapng
+
+┌──(bc-here㉿BC-Here)-[~/CTF/PicoCtf]
+└─$ cat flag.txt
+picoCTF{h1dd3n_1n_pLa1n_51GHT_18375919}
+```
 
 ## Web Exploitation
 **Bookmarklet**   
