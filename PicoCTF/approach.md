@@ -324,7 +324,52 @@ ZXvc
 └─$ strings -e b suspicious.dd.sda1 | rev
 picoCTF{b3_5t111_mL|_<3_ce709d16
 ```
+### 18. shark on wire 2
+**Filters**
+```sh
+udp.ports == 22
+ipp.addr == 10.0.0.66
+```
+- It is indicating that same ip address is connecting with another one with many differect ports
+- Its fishy
+- So with the help of python I worte script which will give me all the ports in a single file and make them horizontal with spaces
+**Script**
+```sh
+import pyshark
 
+# Input pcap file
+pcap_file = "capture.pcap"
+# Output file to store source ports
+output_file = "source_ports.txt"
+# Target IP address to filter
+target_ip = "10.0.0.66"
+
+try:
+    # Open the pcap file
+    capture = pyshark.FileCapture(pcap_file, display_filter=f'ip.addr == {target_ip}')
+
+    # Open the output file in write mode
+    with open(output_file, "w") as file:
+        print(f"Processing packets from {pcap_file}...")
+        # Loop through packets and extract source ports
+        for packet in capture:
+            # Ensure packet has a transport layer (e.g., TCP/UDP)
+            if hasattr(packet, 'transport_layer'):
+                src_port = packet[packet.transport_layer].srcport
+                file.write(f"{src_port}\n")
+
+    print(f"Source ports written to {output_file}")
+except Exception as e:
+    print(f"Error occurred: {e}")
+finally:
+    # Release resources
+    if 'capture' in locals():
+        capture.close()
+```
+```sh
+pip install pyshark
+```
+- Then I convert them from Decimal to ASCII
 ## Cryptography
 ### 17. endianness
 - **The term endianness describes the order in which computer memory stores a sequence of bytes**
