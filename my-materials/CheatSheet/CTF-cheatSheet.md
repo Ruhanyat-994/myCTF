@@ -645,6 +645,13 @@ hydra -L <file for brute force> -p <any string> <ip-address> http-post-form '/wp
 ```sh
 hydra -l <username> -P /usr/share/wordlists/fasttrack.txt <ip> -s <port> pop3 -t 64
 ```
+
+## Nikto
+**Nikto with creds**
+```sh
+nikto -h http://host:port/ -id username:password
+```
+- This is for more juicy directories
 ## Brute Forcing
 **Crafting Wordlist**
 - [RawSec](https://inventory.raw.pm/overview.html)
