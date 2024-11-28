@@ -83,7 +83,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 - I can't read this stuff these are annoying cause I didn't watch anything about joker!
 
-![[Pasted image 20241128184453.png]]
+![Pasted image 20241128184453](https://github.com/user-attachments/assets/84437514-0e1d-44ac-9cec-56e15ef172f7)
 
 - There is a login page at port 8080
 - I tried it with `admin` and `admin` but didn't work !
@@ -104,11 +104,11 @@ gobuster dir -w /usr/share/wordlists/dirb/common.txt -u http://joker.thm/
 
 - `/phpinfo.php`  and `/secret.txt `   seem juicey
 
-![[Pasted image 20241128185010.png]]
+![Pasted image 20241128185010](https://github.com/user-attachments/assets/f1e1155a-b658-466b-8132-af0e9c965d90)
 
 - There is a lot of data here
 
-![[Pasted image 20241128185406.png]]
+![Pasted image 20241128185406](https://github.com/user-attachments/assets/7978babe-3ac3-4d3f-9c18-c988366d0ca8)
 
 - The secret.txt gives us info about some name and file maybe it could be rockyou.txt and the username might be joker or batman
 
@@ -116,7 +116,7 @@ gobuster dir -w /usr/share/wordlists/dirb/common.txt -u http://joker.thm/
 
 - Trying to get the password for the username joker and  the room gave us a hint
 
-![[Pasted image 20241128185817.png]]
+![Pasted image 20241128185817](https://github.com/user-attachments/assets/80492d34-a75f-42b1-b419-b78416001aa4)
 
 ```sh
 ┌──(bc-here㉿BC-Here)-[~/CTF/THM/joker]
@@ -129,7 +129,7 @@ gobuster dir -w /usr/share/wordlists/dirb/common.txt -u http://joker.thm/
 
 ##  Web Enum 2.0
 
-![[Pasted image 20241128190132.png]]
+![Pasted image 20241128190132](https://github.com/user-attachments/assets/5efd5a97-5c25-46b8-98e7-3bb2d49e6aa4)
 
 - mmm! It seems that it is a joomla site
 - Maybe I need to do something about the joomla plugins ! 🙄🙄🙄🙄
@@ -139,7 +139,7 @@ gobuster dir -w /usr/share/wordlists/dirb/common.txt -u http://joker.thm/
 ┌──(bc-here㉿BC-Here)-[~/CTF/THM/joker]
 └─$ nikto -h http://joker.thm:8080/ -id joker:hannah
 ```
-![[Pasted image 20241128190705.png]]
+![Pasted image 20241128190705](https://github.com/user-attachments/assets/03f9829d-d5ff-4805-878a-44e75e5ccaed)
 - This `administrator` would be a login panel for the joomla cms site .
 - mmm! Lets brute force the name `admin` with the `rockyou.txt `file
 - ` /backup.zip` this looks interesting 
@@ -152,7 +152,7 @@ gobuster dir -w /usr/share/wordlists/dirb/common.txt -u http://joker.thm/
 
 ```
 
-![[Pasted image 20241128193113.png]]
+![Pasted image 20241128193109](https://github.com/user-attachments/assets/4095ba68-c273-45dc-9d51-c4622d3afaa2)
 - But it doesn't work
 - Lets Try the `backup.zip` file
 - When I tried To unzip it It needed a password so I gave the password `hannah` and it worked perfectly
@@ -214,14 +214,14 @@ No password hashes left to crack (see FAQ)
 **pass:`abcd1234`**
 
 
-![[Pasted image 20241128202940.png]]
+![Pasted image 20241128193113](https://github.com/user-attachments/assets/e24075e8-c7c9-4d07-99db-526984b506c9)
 
-![[Pasted image 20241128203019.png]]
+![Pasted image 20241128202940](https://github.com/user-attachments/assets/9fe931aa-9811-4366-b790-ee5190a26b08)
 
 - There is a lot of things here
 - It took me 2 days to find where I can get the reverse shell
 - But I got the url
-![[Pasted image 20241128210404.png]]
+![Pasted image 20241128210404-1](https://github.com/user-attachments/assets/6e357103-6e2e-4e2d-88f9-2afded39d779)
 - After pasting the php reverse shell we can hit save and close 
 - Now we have to generate an error so that the `error.php` command runs well
 - And we can get the reverse shell
