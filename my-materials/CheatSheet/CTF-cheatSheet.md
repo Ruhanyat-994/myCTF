@@ -100,7 +100,10 @@ wfuzz -c --hw 977 -u http://team.thm -H "Host: FUZZ.team.thm" -w /usr/share/secl
 ```sh
 aircrack-ng -w /usr/share/wordlists/rockyou.txt capture.pcap
 ```
-
+### SMB Brute-Force
+```sh
+crackmapexec smb <host> -u <username> -p /usr/share/wordlists/rockyou.txt
+```
 
 
 ### JohnTheRipper
