@@ -104,7 +104,11 @@ aircrack-ng -w /usr/share/wordlists/rockyou.txt capture.pcap
 ```sh
 crackmapexec smb <host> -u <username> -p /usr/share/wordlists/rockyou.txt
 ```
-
+### Changing View Format  
+- **Changing XML View Format**
+```sh
+ curl http://nibble.htb/nibbleblog/content/private/config.xml  |  xmllint --format -
+```
 
 ### JohnTheRipper
 
