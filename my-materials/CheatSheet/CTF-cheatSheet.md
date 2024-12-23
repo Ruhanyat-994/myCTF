@@ -1,4 +1,4 @@
-# Jeopardy-style CTFs
+# Cheat Sheet
 
 ## Recon
 
